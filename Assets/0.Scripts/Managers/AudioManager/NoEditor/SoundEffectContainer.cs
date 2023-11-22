@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "SoundEffectContainer",fileName = "AudioManager/SoundEffectContainer")]
+[CreateAssetMenu(menuName = "AudioManager/SoundEffectContainer",fileName = "SoundEffectContainer")]
 public class SoundEffectContainer : ScriptableObject
 {
     public List<AudioClip> soundEffects = new();
-    
     public void AddSoundEffect(AudioClip audioClip)
     {
         foreach (var item in soundEffects)

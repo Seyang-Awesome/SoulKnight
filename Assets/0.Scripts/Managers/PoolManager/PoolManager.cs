@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PoolManager : MonoSingleton<PoolManager>
@@ -41,6 +42,8 @@ public class PoolManager : MonoSingleton<PoolManager>
     /// <returns></returns>
     public GameObject GetGameObject(GameObject prefab, Transform parent = null)// where T : UnityEngine.Object
     {
+        if (prefab.IsUnityNull()) return null;
+        
         GameObject gameObject = null;
 
         if (CheckCache(prefab))
@@ -161,6 +164,7 @@ public class PoolManager : MonoSingleton<PoolManager>
     }
     public bool CheckCache(GameObject prefab)
     {
+        if (prefab.IsUnityNull()) return false;
         return CheckCache(prefab.name);
     }
     

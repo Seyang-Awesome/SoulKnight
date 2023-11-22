@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] 
+    private Transform playerSrTransfrom;
+    
     private PlayerInfo info;
     private Animator animator;
     private Rigidbody2D rb;
@@ -39,9 +42,9 @@ public class PlayerController : MonoBehaviour
     public void SetFaceDirection()
     {
         if (rb.velocity.x > Consts.tinyNum)
-            transform.localScale = playerScale;
+            playerSrTransfrom.localScale = playerScale;
         else if (rb.velocity.x < -Consts.tinyNum)
-            transform.localScale = inversePlayerScale;
+            playerSrTransfrom.localScale = inversePlayerScale;
     }
 
     public void SetVelocity(Vector2 velocity, float dragFactor = 0)

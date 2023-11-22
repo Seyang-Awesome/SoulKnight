@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
+  - Player
+  - Enemy
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
+  - EnemyBullet
   - 
   - 
   - 
@@ -50,9 +50,15 @@ TagManager:
   - name: Player
     uniqueID: 1858707555
     locked: 0
+  - name: Bullet
+    uniqueID: 1004190537
+    locked: 0
   - name: Foreground
     uniqueID: 3939136149
     locked: 0
   - name: Shadow
     uniqueID: 1132337989
+    locked: 0
+  - name: Effect
+    uniqueID: 3631538147
     locked: 0

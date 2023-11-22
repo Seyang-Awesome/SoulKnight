@@ -5,7 +5,7 @@ public class GameInput : MonoSingleton<GameInput>
 {
     private PlayerInputActions input;
     public Vector2 moveInput => input.GamePlay.Move.ReadValue<Vector2>();
-    public bool attackInput => input.GamePlay.Attack.WasPressedThisFrame();
+    public bool attackInput => input.GamePlay.Attack.IsPressed();
     private void Start()
     {
         input = new PlayerInputActions();

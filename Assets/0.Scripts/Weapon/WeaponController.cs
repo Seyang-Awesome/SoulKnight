@@ -13,10 +13,16 @@ namespace WeaponSystem
         [SerializeField] private WeaponDefinitionBase testWeapon2;
 
         private GameInput input;
+        private Rigidbody2D rb;
+        private Vector2 weaponScale;
+        private Vector2 inverseWeaponScale;
+        
         private List<WeaponInGameBase> weaponInGames = new();
         private WeaponInGameBase currentWeapon;
         public int currentWeaponNum => weaponInGames.Count;
         public int currentWeaponIndex => weaponInGames.IndexOf(currentWeapon);
+        public Vector2 aimAtDirection => weaponRoot.localScale.x > 0 ? weaponRoot.right : -weaponRoot.right;
+        public float scaleIndex => weaponRoot.localScale.x > 0 ? 1f : -1f;
 
         public int nextWeaponIndex
         {
@@ -32,6 +38,10 @@ namespace WeaponSystem
         {
             currentWeapon = null;
             input = GameInput.instance;
+            rb = GetComponent<Rigidbody2D>();
+            
+            weaponScale = transform.localScale;
+            inverseWeaponScale = new Vector2(-weaponScale.x, weaponScale.y);
         }
 
         private void Update()
@@ -41,7 +51,8 @@ namespace WeaponSystem
             if(Input.GetKeyDown(KeyCode.E))
                 PickUpWeapon(testWeapon2);
             if(currentWeapon != null && input.attackInput)
-                currentWeapon.Attack();
+                currentWeapon.Attack(aimAtDirection);
+            SetFaceDirection();
         }
 
 
@@ -103,5 +114,14 @@ namespace WeaponSystem
 
         #endregion
 
+        private void SetFaceDirection()
+        {
+            if (rb.velocity.x > Consts.tinyNum)
+                weaponRoot.localScale = weaponScale;
+            else if (rb.velocity.x < -Consts.tinyNum)
+                weaponRoot.localScale = inverseWeaponScale;
+            if(input.moveInput != Vector2.zero)
+                weaponRoot.right = input.moveInput * scaleIndex;
+        }
     }
 }

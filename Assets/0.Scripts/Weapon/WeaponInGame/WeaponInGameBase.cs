@@ -55,7 +55,7 @@ namespace WeaponSystem
             weaponEffectSr = weaponEffectTransform.GetComponent<SpriteRenderer>();
         }
 
-        public virtual void Attack()
+        public virtual void Attack(Vector2 _)
         {
             if (!isCanAttack) return;
 

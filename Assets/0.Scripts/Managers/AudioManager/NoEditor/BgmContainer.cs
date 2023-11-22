@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "BgmContainer",fileName = "AudioManager/BgmContainer")]
+[CreateAssetMenu(menuName = "AudioManager/BgmContainer",fileName = "BgmContainer")]
 public class BgmContainer : ScriptableObject
 {
     public List<AudioClip> bgms = new();

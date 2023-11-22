@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public static class SeyangExtension
@@ -16,6 +17,23 @@ public static class SeyangExtension
     //     transform.DOMove(pos, backTime);
     //     await UniTask.Delay(TimeSpan.FromSeconds(backTime));
     // }
+    
+    public static List<Type> GetDerivedClasses(this Type type)
+    {
+        List<Type> derivedClasses = new List<Type>();
+            
+        foreach(Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
+        {
+            foreach (var t in assembly.GetTypes())
+            {
+                if(t.IsClass && !t.IsAbstract && type.IsAssignableFrom(t))
+                {
+                    derivedClasses.Add(t);
+                }
+            }
+        }
+        return derivedClasses;
+    }
     
 }
 

@@ -23,8 +23,8 @@ MonoBehaviour:
   attackInterval: 0.4
   comboTime: 0
   bullets:
-  - {fileID: 0}
-  bulletExitPos: {x: 0, y: 0}
+  - {fileID: 6276201545462057597, guid: 2f93d43f87950e140b084cc4787af3f8, type: 3}
+  bulletExitPos: {x: 0.7, y: 0.135}
   shakeIntensity: 1.6
   shakeTime: 0.1
   backTime: 0.1

@@ -14,13 +14,17 @@ public class WeaponInGame_OneShoot : WeaponInGameBase
         
         wd = weaponDefinitionBase as WeaponDefinition_OneShoot;
         bullet = wd.bullets[0];
+        bulletExitPosTransform.localPosition = wd.bulletExitPos;
     }
 
-    public override void Attack()
+    public override void Attack(Vector2 direction)
     {
-        base.Attack();
-        // BulletBase newBullet = PoolManager.instance.GetGameObject(bullet);
+        if (!isCanAttack) return;
         
+        base.Attack(direction);
+        Bullet_Single newBullet = PoolManager.instance.GetGameObject(bullet) as Bullet_Single;
+        newBullet.Init(direction);
+        newBullet.transform.position = bulletExitPosTransform.transform.position;
     }
 
     protected override async UniTask Shake()
