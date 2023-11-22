@@ -1,42 +1,66 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private PlayerInfo info;
+    private Animator animator;
     private Rigidbody2D rb;
-    private Vector3 playerScale;
+    private Dictionary<PlayerAniamtionType, string> animationNameDic;
     
+    private Vector2 playerScale;
+    private Vector2 inversePlayerScale;
+
+    private void Awake()
+    {
+        animationNameDic = new()
+        {
+            { PlayerAniamtionType.Idle, "Idle" },
+            { PlayerAniamtionType.Move, "Move" },
+            { PlayerAniamtionType.Die, "Die" },
+        };
+        
+        info = GetComponent<PlayerInfo>();
+        animator = info.playerAnimator;
+        rb = info.rb;
+    }
     private void Start()
     {
-        info = GetComponent<PlayerInfo>();
-        rb = GetComponent<Rigidbody2D>();
         playerScale = transform.localScale;
+        inversePlayerScale = new Vector3(-playerScale.x, playerScale.y);
     }
 
-    public void SetFaceDirection(Vector3 velocity)
+    private void Update()
     {
-        if (velocity.x > 0)
-        {
-            transform.localScale = playerScale;
-        }
-        else if (velocity.x < 0)
-        {
-            transform.localScale = new Vector3(-playerScale.x, playerScale.y, playerScale.z);
-        }
+        SetFaceDirection();
     }
 
-    public void SetVelocity(Vector2 velocity, float dragFactor = 0, bool isWithFaceAdjust = true)
+    public void SetFaceDirection()
+    {
+        if (rb.velocity.x > Consts.tinyNum)
+            transform.localScale = playerScale;
+        else if (rb.velocity.x < -Consts.tinyNum)
+            transform.localScale = inversePlayerScale;
+    }
+
+    public void SetVelocity(Vector2 velocity, float dragFactor = 0)
     {
         rb.velocity = velocity * (1 - dragFactor);
     }
 
-    public void SetVelocityX(float velocity, float dragFactor = 0, bool isWithFaceAdjust = true)
+    public void SetVelocityX(float velocity, float dragFactor = 0)
     {
-        SetVelocity(new Vector2(velocity, rb.velocity.y), dragFactor, isWithFaceAdjust);
+        SetVelocity(new Vector2(velocity, rb.velocity.y), dragFactor);
     }
 
-    public void SetVelocityY(float velocity, float dragFactor = 0, bool isWithFaceAdjust = true)
+    public void SetVelocityY(float velocity, float dragFactor = 0)
     {
-        SetVelocity(new Vector2(rb.velocity.x, velocity), dragFactor, isWithFaceAdjust);
+        SetVelocity(new Vector2(rb.velocity.x, velocity), dragFactor);
+    }
+
+    public void PlayAnimation(PlayerAniamtionType type)
+    {
+        animator.Play(animationNameDic[type]);
     }
 }

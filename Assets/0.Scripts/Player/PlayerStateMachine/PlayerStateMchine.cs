@@ -12,11 +12,12 @@ public class PlayerStateMchine : StateMachine
             { typeof(PlayerState_Move), new PlayerState_Move() }
         };
 
+        PlayerInfo info = GetComponent<PlayerInfo>();
         PlayerController controller = GetComponent<PlayerController>();
         
         foreach (var state in stateDic)
         {
-            (state.Value as PlayerState).Init(this,controller);
+            (state.Value as PlayerState).Init(info,this,controller);
         }
         
         Begin<PlayerState_Idle>();

@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class PlayerState : IState
 {
     protected GameInput input;
+    protected PlayerInfo info;
     protected PlayerStateMchine stateMachine;
     protected PlayerController controller;
     public abstract void Enter();
@@ -15,8 +16,9 @@ public abstract class PlayerState : IState
 
     public abstract void Exit();
 
-    public void Init(PlayerStateMchine stateMachine,PlayerController controller)
+    public void Init(PlayerInfo info, PlayerStateMchine stateMachine,PlayerController controller)
     {
+        this.info = info;
         this.stateMachine = stateMachine;
         this.controller = controller;
         input = GameInput.instance;

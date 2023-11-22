@@ -6,21 +6,25 @@ public class PlayerState_Move : PlayerState
 {
     public override void Enter()
     {
-        throw new System.NotImplementedException();
+        controller.PlayAnimation(PlayerAniamtionType.Move);
     }
 
     public override void PhysicsUpdate()
     {
-        throw new System.NotImplementedException();
+        controller.SetVelocity(input.moveInput * info.moveSpeed);
     }
 
     public override void LogicUpdate()
     {
-        throw new System.NotImplementedException();
+        if (info.isIdling)
+        {
+            stateMachine.SwitchState<PlayerState_Idle>();
+            return;
+        }
     }
 
     public override void Exit()
     {
-        throw new System.NotImplementedException();
+        
     }
 }

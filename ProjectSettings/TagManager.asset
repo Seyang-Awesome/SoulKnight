@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Backgournd
+    uniqueID: 2990998601
+    locked: 0
+  - name: Wall
+    uniqueID: 221841981
+    locked: 0
+  - name: Player
+    uniqueID: 1858707555
+    locked: 0
+  - name: Foreground
+    uniqueID: 3939136149
+    locked: 0
+  - name: Shadow
+    uniqueID: 1132337989
+    locked: 0

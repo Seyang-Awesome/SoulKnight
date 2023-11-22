@@ -14,6 +14,7 @@ public class StateMachine: MonoBehaviour
     protected Dictionary<System.Type, IState> stateDic;
     //当前状态
     public IState currentState;
+    public IState lastState;
 
     protected virtual void Update()
     {
@@ -28,6 +29,7 @@ public class StateMachine: MonoBehaviour
     public virtual void Begin(IState state)
     {
         currentState = state;
+        lastState = null;
         currentState.Enter();
     }
 
@@ -44,6 +46,7 @@ public class StateMachine: MonoBehaviour
     public virtual void SwitchState(IState state)
     {
         currentState.Exit();
+        lastState = currentState;
         currentState = state;
         currentState.Enter();
     }

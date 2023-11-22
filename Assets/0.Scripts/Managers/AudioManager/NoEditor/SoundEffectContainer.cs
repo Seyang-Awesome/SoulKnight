@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "SoundEffectContainer",fileName = "AudioManager/SoundEffectContainer")]
 public class SoundEffectContainer : ScriptableObject
 {
     public List<AudioClip> soundEffects = new();
