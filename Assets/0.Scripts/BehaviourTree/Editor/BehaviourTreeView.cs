@@ -18,6 +18,7 @@ namespace MyEditor.BehaviourTree
         public BehaviourTreeConfig bt;
 
         public Action<NodeView> onNodeViewSelected;
+        public Action onNodeViewDeselected;
 
         //必须覆写这个类，才能在UIBuilder里添加这个自定义VisualElement
         public new class UxmlFactory : UxmlFactory<BehaviourTreeView, UxmlTraits> { }
@@ -182,6 +183,7 @@ namespace MyEditor.BehaviourTree
             if (node == null) return;
             NodeView nodeView = new NodeView(node);
             nodeView.onNodeViewSelected = onNodeViewSelected;
+            nodeView.onNodeViewDeselected = onNodeViewDeselected;
             nodeView.SetPosition(new Rect(pos,Vector2.one));
             AddElement(nodeView);
         }

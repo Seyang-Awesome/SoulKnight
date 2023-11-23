@@ -21,6 +21,8 @@ namespace MyEditor.BehaviourTree
         {
             Clear();
 
+            if (nodeView == null) return;
+
             UnityEngine.Object.DestroyImmediate(editor);
 
             editor = Editor.CreateEditor(nodeView.node);

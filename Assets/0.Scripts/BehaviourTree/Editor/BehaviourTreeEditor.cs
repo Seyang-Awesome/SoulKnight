@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -5,31 +6,32 @@ using UnityEditor.Callbacks;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Object = UnityEngine.Object;
 
 namespace MyEditor.BehaviourTree
 {
-    //´ò¿ªBehaviorTree±à¼­Æ÷µÄ´°¿Ú
+    //ï¿½ï¿½BehaviorTreeï¿½à¼­ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
     public class BehaviourTreeEditor : EditorWindow
     {
-        //¼ÓÔØÎÄ¼þµÄpath
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½path
         const string path = "Assets/0.Scripts/BehaviourTree/Resources/";
         public static BehaviourTreeEditor windowRoot;
-        private static InspectorView inspectorView; //InspectorÃæ°å
-        private static BehaviourTreeView btView; //BehaviorTreeÃæ°å
+        private static InspectorView inspectorView; //Inspectorï¿½ï¿½ï¿½
+        private static BehaviourTreeView btView; //BehaviorTreeï¿½ï¿½ï¿½
         
-        public static ObjectField fileSource;//ÐÐÎªÊ÷µÄÎÄ¼þÔ´
+        public static ObjectField fileSource;//ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Ô´
 
-        //´ò¿ª´°¿ÚµÄÂ·¾¶
+        //ï¿½ò¿ª´ï¿½ï¿½Úµï¿½Â·ï¿½ï¿½
         [MenuItem("MyEditor/BehaviourTreeEditor")]
         public static void OpenBtEditor()
         {
-            //µÃµ½Õâ¸ö´°¿Ú²¢´ò¿ª£¨´ò¿ªÊ±»áµ÷ÓÃCreateGUIº¯Êý£©
+            //ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ò¿ª£ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½CreateGUIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             BehaviourTreeEditor wnd = GetWindow<BehaviourTreeEditor>();
-            //ÉèÖÃ´°¿ÚµÄ±êÌâ
+            //ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ÚµÄ±ï¿½ï¿½ï¿½
             wnd.titleContent = new GUIContent("BehaviourWindowEditor");
         }
 
-        //µ±´ò¿ªÎÄ¼þµÄÀàÐÍÊÇBehaviourTreeConfigÊ±µ÷ÓÃ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½BehaviourTreeConfigÊ±ï¿½ï¿½ï¿½ï¿½
         [OnOpenAsset]
         public static bool OnOpenAsset(int instanceId,int line)
         {
@@ -47,13 +49,13 @@ namespace MyEditor.BehaviourTree
             windowRoot = this;
             VisualElement root = rootVisualElement;
 
-            //Ìí¼ÓuxmlÎÄ¼þºÍussÎÄ¼þµÄÒýÓÃ
+            //ï¿½ï¿½ï¿½uxmlï¿½Ä¼ï¿½ï¿½ï¿½ussï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             var uxmlFile = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>($"{path}BehaviourTreeEditor.uxml");
             uxmlFile.CloneTree(root);
             var ussFile = AssetDatabase.LoadAssetAtPath<StyleSheet>($"{path}BehaviourTreeEditor.uss");
             root.styleSheets.Add(ussFile);
 
-            //²éÕÒÏà¹ØÒýÓÃ
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             inspectorView = root.Q<InspectorView>();
             btView = root.Q<BehaviourTreeView>();
 
@@ -61,17 +63,32 @@ namespace MyEditor.BehaviourTree
             fileSource.objectType = typeof(BehaviourTreeConfig);
             fileSource.RegisterCallback<ChangeEvent<Object>>(LoadBtFile);
 
-            //×¢²áÊÂ¼þ
+            //×¢ï¿½ï¿½ï¿½Â¼ï¿½
             btView.onNodeViewSelected = OnNodeViewSelected;
+            btView.onNodeViewDeselected = OnNodeViewDeselected;
 
-            //µ±ÎÄ¼þÔ´ÓÐÖµÊ±Ö±½Ó¼ÓÔØ
+            //ï¿½ï¿½ï¿½Ä¼ï¿½Ô´ï¿½ï¿½ÖµÊ±Ö±ï¿½Ó¼ï¿½ï¿½ï¿½
             if (fileSource.value != null)
                 LoadBtFile(fileSource.value as BehaviourTreeConfig);
+        }
+
+        private void OnDestroy()
+        {
+            BehaviourTreeConfig btConfig = fileSource.value as BehaviourTreeConfig;;
+            if (btConfig == null) return;
+            
+            btConfig.nodes.ForEach(EditorUtility.SetDirty);
+            AssetDatabase.SaveAssets();
         }
 
         public void OnNodeViewSelected(NodeView nodeView)
         {
             inspectorView.UpdateView(nodeView);
+        }
+
+        public void OnNodeViewDeselected()
+        {
+            inspectorView.UpdateView(null);
         }
 
         public void LoadBtFile(ChangeEvent<Object> evt)
@@ -86,9 +103,6 @@ namespace MyEditor.BehaviourTree
             btView.PopulateView(config);
         }
 
-        //public void SaveBtFile()
-        //{
-
-        //}
+        
     }
 }

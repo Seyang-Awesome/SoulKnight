@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class AudioManager : MonoSingleton<AudioManager>
@@ -16,7 +17,8 @@ public class AudioManager : MonoSingleton<AudioManager>
     private AudioSource bgmComponent;
     private AudioSource seComponent;
     // private List<AudioSource> soundEffectComponents = new();
-
+    
+    
     public float bgmVolume => bgmComponent.volume;
     public float seVolume => seComponent.volume;
     private void Start()
@@ -33,7 +35,7 @@ public class AudioManager : MonoSingleton<AudioManager>
         bgmComponent.loop = true;
         seComponent = audioRoot.AddComponent<AudioSource>();
     }
-
+    
     public void PlayBgm(string bgmName)
     {
         if (!bgms.ContainsKey(bgmName)) return;

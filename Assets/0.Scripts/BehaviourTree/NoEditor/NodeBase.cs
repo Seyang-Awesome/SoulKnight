@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
-using Unity.VisualScripting;
 using System;
 
 namespace MyEditor.BehaviourTree
@@ -22,7 +20,7 @@ namespace MyEditor.BehaviourTree
         [HideInInspector]public NodeState state = NodeState.Running;
         [HideInInspector] public bool isStarted = false;
         [ReadOnly]public string guid;
-        [HideInInspector] public Vector2 posInView;
+        [ReadOnly]public Vector2 posInView;
         public NodeState Update()
         {
             if (!isStarted)
@@ -39,36 +37,16 @@ namespace MyEditor.BehaviourTree
 
             return state;
         }
-        public abstract void OnStart();
-        public abstract void OnStop();
-        public abstract NodeState OnUpdate();
+        protected abstract void OnStart();
+        protected abstract void OnStop();
+        protected abstract NodeState OnUpdate();
         public virtual NodeBase CloneNode()
         {
             NodeBase node = Instantiate(this);
             return node;
         }
     }
-
-    public class RootNode : NodeBase
-    {
-        public NodeBase child;
-        public override void OnStart() { }
-
-        public override void OnStop() { }
-
-        public override NodeState OnUpdate()
-        {
-            return child.Update();
-        }
-
-        public override NodeBase CloneNode()
-        {
-            RootNode node = Instantiate(this);
-            node.child = child.CloneNode();
-            return node;
-        }
-    }
-
+    
     /// <summary>
     /// 组合类节点，有多个子节点按照一定规律运行
     /// </summary>
@@ -105,98 +83,6 @@ namespace MyEditor.BehaviourTree
     public abstract class ActionNode: NodeBase
     {
 
-    }
-
-    /// <summary>
-    /// 顺序节点，会按照子节点的次序一个接一个执行
-    /// 全部执行完毕后返回Success
-    /// 若其中有一个执行失败返回Failure
-    /// </summary>
-    public class SequenceNode : CompositeNode
-    {
-        int current;
-        public override void OnStart()
-        {
-            current = 0;
-        }
-
-        public override void OnStop() { }
-
-        public override NodeState OnUpdate()
-        {
-            var child = children[current];
-            switch (child.Update())
-            {
-                case NodeState.Running:
-                    return NodeState.Running;
-                case NodeState.Success:
-                    current++;
-                    if (current >= children.Count)
-                        return NodeState.Success;
-                    return NodeState.Running;
-                case NodeState.Failure:
-                    return NodeState.Failure;
-                default:
-                    throw new System.Exception("行为树运行状态出现异常！");
-            }
-        }
-    }
-
-    /// <summary>
-    /// 循环节点，表明该节点的子节点会一直执行（一般作为根节点）
-    /// </summary>
-    public class LoopNode : DecoratorNode
-    {
-        public override void OnStart() { }
-
-        public override void OnStop() { }
-
-        public override NodeState OnUpdate()
-        {
-            child.Update();
-            return NodeState.Running;
-        }
-    }
-
-    /// <summary>
-    /// 延迟节点，延迟一定时间后执行子节点
-    /// </summary>
-    public class DelayNode : DecoratorNode
-    {
-        public float duration;
-        float currentTime;
-        public DelayNode() { }
-        public DelayNode(float duration) { this.duration = duration; }
-
-        public override void OnStart()
-        {
-            currentTime = 0;
-        }
-
-        public override void OnStop() { }
-
-        public override NodeState OnUpdate()
-        {
-            currentTime += Time.deltaTime;
-            if (currentTime <= duration)
-                return NodeState.Running;
-            else
-                return child.Update();
-        }
-    }
-
-    public class DebugNode : ActionNode
-    {
-        public string message;
-        public DebugNode() { }
-        public DebugNode(string message) { this.message = message; }
-        public override void OnStart() { }
-        public override void OnStop() { }
-        public override NodeState OnUpdate()
-        {
-            Debug.Log(message);
-            return NodeState.Success;
-        }
     }
 }
 

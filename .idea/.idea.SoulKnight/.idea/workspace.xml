@@ -5,39 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Bullet/Bullet_Single.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Bullet/Bullet_Single.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/Consts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/Consts.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/Enums.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/MonoSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/MonoSingleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/MonoSingleton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/SeyangExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/SeyangExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/SeyangExtension.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/SeyangExtension.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/StateMachine.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/StateMachine.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/StateMachine/IState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/StateMachine/IState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/StateMachine/IState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/StateMachine/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/StateMachine/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Core/StateMachine/StateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/StateMachine/StateMachine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/AudioManager/NoEditor/BgmContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/AudioManager/NoEditor/BgmContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/AudioManager/NoEditor/SoundEffectContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/AudioManager/NoEditor/SoundEffectContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/GameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/GameInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/PoolManager/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/PoolManager/PoolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Weapon/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Weapon/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Weapon/WeaponInGame/WeaponInGameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Weapon/WeaponInGame/WeaponInGameBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Weapon/WeaponInGame/WeaponInGame_OneShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Weapon/WeaponInGame/WeaponInGame_OneShoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Weapon.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Weapon/WeaponContainer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Weapon/WeaponContainer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions/Weapon_1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions/Weapon_1001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/Resources/Test.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/Resources/Test.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/AudioManager/NoEditor/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/AudioManager/NoEditor/AudioManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +106,8 @@
       <workItem from="1700556157788" duration="14754000" />
       <workItem from="1700575565080" duration="1455000" />
       <workItem from="1700635202865" duration="7003000" />
-      <workItem from="1700645231232" duration="2746000" />
+      <workItem from="1700645231232" duration="3366000" />
+      <workItem from="1700654498964" duration="935000" />
     </task>
     <servers />
   </component>

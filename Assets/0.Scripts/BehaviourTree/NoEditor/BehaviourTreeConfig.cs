@@ -12,7 +12,7 @@ namespace MyEditor.BehaviourTree
     [CreateAssetMenu()]
     public class BehaviourTreeConfig : SerializedScriptableObject
     {
-        [SerializeField] 
+        [SerializeField]
         public NodeBase rootNode;
 
         [SerializeField]

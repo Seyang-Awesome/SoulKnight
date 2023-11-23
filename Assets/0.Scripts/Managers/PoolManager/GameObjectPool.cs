@@ -27,7 +27,7 @@ public class GameObjectPool
     public GameObject GetGameObject(Transform parent=null)
     {
         GameObject gameObject = gameObjectQueue.Dequeue();
-        gameObject.transform.parent = null;
+        gameObject.transform.SetParent(null);
         SceneManager.MoveGameObjectToScene(gameObject,SceneManager.GetActiveScene());
         gameObject.transform.SetParent(parent);
         gameObject.SetActive(true);

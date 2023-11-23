@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -14,6 +15,7 @@ namespace MyEditor.BehaviourTree
         public Port output;
 
         public Action<NodeView> onNodeViewSelected;
+        public Action onNodeViewDeselected;
         public NodeView(NodeBase node)
         {
             this.node = node;
@@ -83,6 +85,9 @@ namespace MyEditor.BehaviourTree
             base.SetPosition(newPos);
 
             node.posInView = newPos.position;
+            
+            // EditorUtility.SetDirty(node);
+            // AssetDatabase.SaveAssets();
         }
 
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
@@ -95,6 +100,13 @@ namespace MyEditor.BehaviourTree
             base.OnSelected();
             if (onNodeViewSelected != null)
                 onNodeViewSelected.Invoke(this);
+        }
+
+        public override void OnUnselected()
+        {
+            base.OnUnselected();
+            if (onNodeViewDeselected != null)
+                onNodeViewDeselected.Invoke();
         }
     }
 }

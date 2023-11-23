@@ -5,8 +5,15 @@ using UnityEngine;
 
 public abstract class PanelBase : MonoBehaviour
 {
+    //是否正在显示（当isHideDirectly为真时，UI面板在Hiding的过渡阶段时该值也为真）
+    public bool isShowing { get; private set; }
+
     //是否在隐藏阶段（当isHideDirectly为真时，在隐藏面板时不会直接SetActive(false),需要手动调用ClearSelfCache来隐藏面板）
-    public bool isHiding { get; private set; } 
+    public bool isHiding { get; private set; }
+    public event Action onHideCallback;
+    
+    //面板是否完全隐藏
+    public bool isHideCompeleted => (!isShowing) && (!isHiding);
     
     //面板的sortingLayer（sortingLayer越高，面板显示越靠前）
     public abstract int panelSortingLayer { get;}
@@ -33,6 +40,7 @@ public abstract class PanelBase : MonoBehaviour
     public virtual void OnShow()
     {
         isHiding = false;
+        isShowing = true;
     }
 
     /// <summary>
@@ -49,7 +57,11 @@ public abstract class PanelBase : MonoBehaviour
     public virtual void OnHide()
     {
         if (isHideDirectly)
+        {
             isHiding = true;
+            isShowing = false;
+            onHideCallback?.Invoke();
+        }
     }
 
     /// <summary>
@@ -73,6 +85,8 @@ public abstract class PanelBase : MonoBehaviour
     /// </summary>
     protected void ClearSelfCache()
     {
+        isShowing = false;
+        onHideCallback?.Invoke();
         UIManager.instance.ClearPanelCache(this.GetType());
     }
 }
