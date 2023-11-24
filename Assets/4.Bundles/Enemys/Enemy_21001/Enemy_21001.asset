@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3171124426065568261
+--- !u!114 &-3080123717093889026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,23 +9,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: RootNode
-  m_EditorClassIdentifier: Assembly-CSharp:MyEditor.BehaviourTree:RootNode
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  state: 0
-  isStarted: 0
-  guid: b8d56bee2868ec64c8e2a113dfb9e0e1
-  posInView: {x: 0, y: 0}
-  child: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 923de2113bd6439fa65c6c24b559054a, type: 3}
+  m_Name: ContinueNode
+  m_EditorClassIdentifier: 
+  guid: cb81f27e-8728-423e-b592-65ef01dc299f
+  posInView: {x: 130, y: 0}
+  child: {fileID: -1220147076422949108}
+  duration: 5
+--- !u!114 &-1220147076422949108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ee5217233342c69185f8ab84293e5d, type: 3}
+  m_Name: EnemyIdleNode
+  m_EditorClassIdentifier: 
+  guid: 3edf6c1b-180e-4252-9411-a60611464492
+  posInView: {x: 290, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,7 +40,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4fb344f9e6757c47877ddabdc2580f0, type: 3}
-  m_Name: New Behaviour Tree Config
+  m_Name: Enemy_21001
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -47,11 +51,13 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  rootNode: {fileID: 3606484090694637946}
+  rootNode: {fileID: 359398535909042062}
   nodes:
-  - {fileID: 3606484090694637946}
+  - {fileID: 359398535909042062}
+  - {fileID: -3080123717093889026}
+  - {fileID: -1220147076422949108}
   state: 0
---- !u!114 &3606484090694637946
+--- !u!114 &359398535909042062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,17 +69,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8768ca6e684607bc6272089c25d517, type: 3}
   m_Name: RootNode
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  state: 0
-  isStarted: 0
-  guid: 5766bf9f3223d634888945442e37fc26
+  guid: c44d955118153ec49beb3b068d1381a2
   posInView: {x: 0, y: 0}
-  child: {fileID: 0}
+  child: {fileID: -3080123717093889026}

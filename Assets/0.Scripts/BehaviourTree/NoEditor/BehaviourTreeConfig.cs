@@ -1,10 +1,7 @@
 using Sirenix.OdinInspector;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using MyEditor.BehaviourTree;
-using UnityEditor;
-using Unity.VisualScripting;
 using Sirenix.Utilities;
 
 namespace MyEditor.BehaviourTree
@@ -19,7 +16,7 @@ namespace MyEditor.BehaviourTree
         public List<NodeBase> nodes = new();
 
         public NodeState state = NodeState.Running;
-
+        
         public NodeState Update()
         {
             state = rootNode.Update();
@@ -30,12 +27,8 @@ namespace MyEditor.BehaviourTree
         {
             NodeBase newNode = ScriptableObject.CreateInstance(type) as NodeBase;
             newNode.name = type.Name;
-            newNode.guid = GUID.Generate().ToString();
+            newNode.guid = Guid.NewGuid().ToString();
             nodes.Add(newNode);
-
-            AssetDatabase.AddObjectToAsset(newNode, this);
-            EditorUtility.SetDirty(this);
-            AssetDatabase.SaveAssets();
 
             return newNode;
         }
@@ -47,8 +40,6 @@ namespace MyEditor.BehaviourTree
             {
                 rootNode = null;
             }
-            AssetDatabase.RemoveObjectFromAsset(node);
-            AssetDatabase.SaveAssets();
         }
 
         public void AddChild(NodeBase parent,NodeBase child)
@@ -115,7 +106,7 @@ namespace MyEditor.BehaviourTree
             return nodes;
         }
 
-        public BehaviourTreeConfig CloneBehaviourTree()
+        public BehaviourTreeConfig CloneBtTree()
         {
             BehaviourTreeConfig btConfig = Instantiate(this);
             btConfig.rootNode = rootNode.CloneNode();

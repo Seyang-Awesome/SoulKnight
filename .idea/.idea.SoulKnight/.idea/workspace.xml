@@ -5,9 +5,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyComponentsBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyComponentsBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes/Action.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes/Action/EnemyIdleNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes/Action/EnemyIdleNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes/Action/EnemyMoveRandomNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes/Action/EnemyMoveRandomNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes/Action/EnemyNodeBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes/Action/EnemyNodeBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/CustomNodes/Decorator.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/DecoratorNode/ContinueNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/DecoratorNode/ContinueNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeRuntimeData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeRuntimeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/RuntimeNodeBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/RuntimeNodeBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/RuntimeNodeBases.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/RuntimeNodeBases/RootRuntimeNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/RuntimeNodeBases/RootRuntimeNode.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/Resources/Test.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/Resources/Test.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/AudioManager/NoEditor/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/AudioManager/NoEditor/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/Editor/BehaviourTreeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/Editor/BehaviourTreeView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/BehaviourTreeConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/BehaviourTreeConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/BtRunner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/BtRunner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/ActionNode.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/ActionNode.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/ActionNode/DebugNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/ActionNode/DebugNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/ActionNode/DebugNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/ActionNode/DebugNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes/ParallelAllNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes/ParallelAllNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes/ParallelAllNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes/ParallelAllNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes/ParallelAnyNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes/ParallelAnyNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes/ParallelAnyNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes/ParallelAnyNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes/SelectNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes/SelectNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes/SelectNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes/SelectNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes/SequenceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes/SequenceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/CompositeNodes/SequenceNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/CompositeNodes/SequenceNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/DecoratorNode.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/DecoratorNode.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/DecoratorNode/DelayNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/DecoratorNode/DelayNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/DecoratorNode/DelayNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/DecoratorNode/DelayNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/DecoratorNode/LoopNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/DecoratorNode/LoopNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/Nodes/DecoratorNode/LoopNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/DecoratorNode/LoopNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/RootNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/RootNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/RootNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/RootNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/Resources/New Behaviour Tree Config.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/Resources/New Behaviour Tree Config.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerStateMchine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerStateMchine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerState_Idle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerState_Idle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerState_Move.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerState_Move.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Weapon/WeaponComponentTypeGetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Weapon/WeaponComponentTypeGetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/New Behaviour Tree Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/New Behaviour Tree Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions/Weapon_1001.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions/Weapon_1001.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,17 +89,23 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/LocalLow/DefaultCompany/SoulKnight(TryAgain)/FastScriptReload/ScriptOverrides/GameInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b9fa26e86114fcba20da47317e725fe172c00/1c/b16a6e0a/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b9fa26e86114fcba20da47317e725fe172c00/68/f2efe1be/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b9fa26e86114fcba20da47317e725fe172c00/d9/5928a646/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/afae3a3d5df142d68c8d630a25dbf8143da00/37/e3fd1e49/Node.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/da/a2d8c934/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d303c2bf72cd4cec95665b89c457d265d2b8ef3ed6da17cd4f85587c2f9de7/System.Linq.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0.Scripts/0.Core/StateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0.Scripts/Effect/ParticleManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/0.Scripts/Player/PlayerStateMachine/PlayerState_Move.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.3/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2YCf1KghnEb6Sb0Nr8IPPpjObdF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,6 +120,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;RiderCSharpFileTemplatesSettingsId&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -83,10 +159,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="48088">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="48088" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -108,6 +184,9 @@
       <workItem from="1700635202865" duration="7003000" />
       <workItem from="1700645231232" duration="3366000" />
       <workItem from="1700654498964" duration="935000" />
+      <workItem from="1700729777486" duration="8675000" />
+      <workItem from="1700743663448" duration="6823000" />
+      <workItem from="1700792842429" duration="7884000" />
     </task>
     <servers />
   </component>
@@ -116,6 +195,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

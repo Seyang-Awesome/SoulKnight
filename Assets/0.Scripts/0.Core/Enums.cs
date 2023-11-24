@@ -3,7 +3,7 @@ public class Enums
     
 }
 
-public enum PlayerAniamtionType
+public enum AniamtionType
 {
     Idle,
     Move,

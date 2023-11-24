@@ -10,7 +10,7 @@ public class WeaponComponentTypeGetter : MonoSingleton<WeaponComponentTypeGetter
     {
         weaponTypeDic = new()
         {
-            {1001,typeof(WeaponInGame_OneShoot)},
+            {11001,typeof(WeaponInGame_OneShoot)},
         };
     }
 

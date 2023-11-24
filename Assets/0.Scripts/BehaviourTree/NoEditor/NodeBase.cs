@@ -2,28 +2,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using System;
+using UnityEngine.Serialization;
 
 namespace MyEditor.BehaviourTree
 {
-    //节点的状态
-    public enum NodeState
-    {
-        Running,//正在运行
-        Success,//成功运行
-        Failure//运行失败
-    }
+    
 
     //行为树节点基类
     [Serializable]
-    public abstract class NodeBase : SerializedScriptableObject
+    public abstract class NodeBase : ScriptableObject
     {
-        [HideInInspector]public NodeState state = NodeState.Running;
-        [HideInInspector] public bool isStarted = false;
+        public abstract Type relevantType { get; }
+
+        //运行时数据
+        // protected BtRunner btRunner;
+        // protected GameObject gameObject;
+        protected NodeRuntimeData data;
+        protected NodeState state = NodeState.Running;
+        protected bool isStarted = false;
+        
+        //存储数据
         [ReadOnly]public string guid;
         [ReadOnly]public Vector2 posInView;
+        
+        //运行时函数
+        // public void Init(BtRunner btRunner,GameObject gameObject)
+        // {
+        //     this.btRunner = btRunner;
+        //     this.gameObject = gameObject;
+        // }
+        
+        //运行时函数
+        public void Init(NodeRuntimeData data)
+        {
+            this.data = data;
+        }
         public NodeState Update()
         {
-            if (!isStarted)
+            if (!isStarted) 
             {
                 isStarted = true;
                 OnStart();
@@ -37,9 +53,11 @@ namespace MyEditor.BehaviourTree
 
             return state;
         }
-        protected abstract void OnStart();
-        protected abstract void OnStop();
-        protected abstract NodeState OnUpdate();
+        public abstract void OnStart();
+        public abstract void OnStop();
+        public abstract NodeState OnUpdate();
+        
+        //编辑行为树函数
         public virtual NodeBase CloneNode()
         {
             NodeBase node = Instantiate(this);
@@ -82,7 +100,21 @@ namespace MyEditor.BehaviourTree
     /// </summary>
     public abstract class ActionNode: NodeBase
     {
+        public override void OnStart()
+        {
+            // Debug.Log(data);
+            // Debug.Log(data.btRunner);
+            // Debug.Log(data.gameObject);
 
+            data.btRunner.onFixedUpdate += OnFixedUpdate;
+        }
+
+        public override void OnStop()
+        {
+            data.btRunner.onFixedUpdate -= OnFixedUpdate;
+        }
+
+        protected virtual void OnFixedUpdate() { }
     }
 }
 

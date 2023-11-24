@@ -47,7 +47,7 @@ TagManager:
   - name: Wall
     uniqueID: 221841981
     locked: 0
-  - name: Player
+  - name: Entity
     uniqueID: 1858707555
     locked: 0
   - name: Bullet

@@ -132,6 +132,9 @@ namespace MyEditor.BehaviourTree
                         {
                             NodeBase node = (element as NodeView).node;
                             bt.DeleteNode(node);
+                            
+                            AssetDatabase.RemoveObjectFromAsset(node);
+                            AssetDatabase.SaveAssets();
                         }
                     }
                     
@@ -171,6 +174,10 @@ namespace MyEditor.BehaviourTree
             }
             NodeBase node = bt.CreateNode(type);
             CreateNodeView(node,pos);
+            
+            AssetDatabase.AddObjectToAsset(node, bt);
+            EditorUtility.SetDirty(node);
+            AssetDatabase.SaveAssets();
 
             return node;
         }
