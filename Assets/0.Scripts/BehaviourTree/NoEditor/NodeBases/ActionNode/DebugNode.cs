@@ -1,19 +1,15 @@
+using System;
 using UnityEngine;
 
-namespace MyEditor.BehaviourTree
+namespace Seyang.BehaviourTree
 {
     public class DebugNode : ActionNode
     {
         public string message;
-        public DebugNode() { }
-        public DebugNode(string message) { this.message = message; }
-        public override void OnStart() { }
-        public override void OnStop() { }
-
-        public override NodeState OnUpdate()
+        public override Type relevantType => typeof(DebugRuntimeNode);
+        public override RuntimeNodeBase InstantiateRuntimeNode()
         {
-            Debug.Log(message);
-            return NodeState.Success;
+            return new DebugRuntimeNode(message);
         }
     }
 }

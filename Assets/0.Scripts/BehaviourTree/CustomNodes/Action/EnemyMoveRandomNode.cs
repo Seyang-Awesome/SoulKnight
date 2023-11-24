@@ -1,23 +1,16 @@
 using System;
 using System.Collections.Generic;
-using MyEditor.BehaviourTree;
+using Seyang.BehaviourTree;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyMoveRandomNode : ActionNode
 {
-    public override void OnStart()
+    public override Type relevantType => typeof(EnemyMoveRandomRuntimeNode);
+    public override RuntimeNodeBase InstantiateRuntimeNode()
     {
-        base.OnStart();
-    }
-
-    public override void OnStop()
-    {
-        base.OnStop();
-    }
-
-    public override NodeState OnUpdate()
-    {
-        throw new NotImplementedException();
+        return new EnemyMoveRandomRuntimeNode();
     }
 }
+
 

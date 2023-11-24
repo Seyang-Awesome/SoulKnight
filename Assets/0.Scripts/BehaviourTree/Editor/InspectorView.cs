@@ -9,7 +9,7 @@ using UnityEditor;
 //using Editor = UnityEditor.Editor;
 
 
-namespace MyEditor.BehaviourTree
+namespace Seyang.BehaviourTree
 {
     public class InspectorView : VisualElement
     {

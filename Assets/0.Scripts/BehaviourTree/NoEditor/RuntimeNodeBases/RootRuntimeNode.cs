@@ -2,14 +2,24 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RootRuntimeNode : RuntimeNodeBase
+namespace Seyang.BehaviourTree
 {
-    public RuntimeNodeBase child;
-    public override void OnStart() { }
-    public override void OnStop() { }
-    public override NodeState OnUpdate()
+    public class RootRuntimeNode : RuntimeNodeBase
     {
-        return child.Update();
+        public RuntimeNodeBase child;
+
+        public override void OnStart()
+        {
+        }
+
+        public override void OnStop()
+        {
+        }
+
+        public override NodeState OnUpdate()
+        {
+            return child.Update();
+        }
     }
 }
 

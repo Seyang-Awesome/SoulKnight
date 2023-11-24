@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine.UIElements;
 
-namespace MyEditor.BehaviourTree
+namespace Seyang.BehaviourTree
 {
     public class SplitView : TwoPaneSplitView
     {

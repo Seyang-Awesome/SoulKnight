@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.Utilities;
 
-namespace MyEditor.BehaviourTree
+namespace Seyang.BehaviourTree
 {
     [CreateAssetMenu()]
     public class BehaviourTreeConfig : SerializedScriptableObject
@@ -14,14 +14,6 @@ namespace MyEditor.BehaviourTree
 
         [SerializeField]
         public List<NodeBase> nodes = new();
-
-        public NodeState state = NodeState.Running;
-        
-        public NodeState Update()
-        {
-            state = rootNode.Update();
-            return state;
-        }
 
         public NodeBase CreateNode(System.Type type)
         {

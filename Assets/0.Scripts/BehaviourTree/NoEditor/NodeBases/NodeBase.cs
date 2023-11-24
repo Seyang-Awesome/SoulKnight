@@ -4,58 +4,17 @@ using Sirenix.OdinInspector;
 using System;
 using UnityEngine.Serialization;
 
-namespace MyEditor.BehaviourTree
+namespace Seyang.BehaviourTree
 {
-    
-
     //行为树节点基类
     [Serializable]
     public abstract class NodeBase : ScriptableObject
     {
         public abstract Type relevantType { get; }
-
-        //运行时数据
-        // protected BtRunner btRunner;
-        // protected GameObject gameObject;
-        protected NodeRuntimeData data;
-        protected NodeState state = NodeState.Running;
-        protected bool isStarted = false;
         
         //存储数据
         [ReadOnly]public string guid;
         [ReadOnly]public Vector2 posInView;
-        
-        //运行时函数
-        // public void Init(BtRunner btRunner,GameObject gameObject)
-        // {
-        //     this.btRunner = btRunner;
-        //     this.gameObject = gameObject;
-        // }
-        
-        //运行时函数
-        public void Init(NodeRuntimeData data)
-        {
-            this.data = data;
-        }
-        public NodeState Update()
-        {
-            if (!isStarted) 
-            {
-                isStarted = true;
-                OnStart();
-            }
-            state = OnUpdate();
-            if (state == NodeState.Success || state == NodeState.Failure)
-            {
-                isStarted = false;
-                OnStop();
-            }
-
-            return state;
-        }
-        public abstract void OnStart();
-        public abstract void OnStop();
-        public abstract NodeState OnUpdate();
         
         //编辑行为树函数
         public virtual NodeBase CloneNode()
@@ -63,6 +22,8 @@ namespace MyEditor.BehaviourTree
             NodeBase node = Instantiate(this);
             return node;
         }
+
+        public abstract RuntimeNodeBase InstantiateRuntimeNode();
     }
     
     /// <summary>
@@ -100,21 +61,10 @@ namespace MyEditor.BehaviourTree
     /// </summary>
     public abstract class ActionNode: NodeBase
     {
-        public override void OnStart()
+        public override NodeBase CloneNode()
         {
-            // Debug.Log(data);
-            // Debug.Log(data.btRunner);
-            // Debug.Log(data.gameObject);
-
-            data.btRunner.onFixedUpdate += OnFixedUpdate;
+            return Instantiate(this);
         }
-
-        public override void OnStop()
-        {
-            data.btRunner.onFixedUpdate -= OnFixedUpdate;
-        }
-
-        protected virtual void OnFixedUpdate() { }
     }
 }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyInfo : MonoBehaviour
 {
-    public float speed;
+    public float moveSpeed;
     public float dragFactor;
 }
 

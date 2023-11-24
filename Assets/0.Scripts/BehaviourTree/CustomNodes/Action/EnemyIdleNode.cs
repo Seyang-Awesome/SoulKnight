@@ -1,31 +1,14 @@
 using System;
 using System.Collections.Generic;
-using MyEditor.BehaviourTree;
+using Seyang.BehaviourTree;
 using UnityEngine;
 
-public class EnemyIdleNode : EnemyNodeBase
+public class EnemyIdleNode : ActionNode
 {
-    public override void OnStart()
+    public override Type relevantType => typeof(EnemyIdleRuntimeNode);
+    public override RuntimeNodeBase InstantiateRuntimeNode()
     {
-        base.OnStart();
-        controller.PlayAnimation(AniamtionType.Idle);
-    }
-    
-    protected override void OnFixedUpdate()
-    {
-        base.OnFixedUpdate();
-        controller.SetVelocity(Vector2.zero);
-        Debug.Log("OnFixedUpdate");
-    }
-
-    public override NodeState OnUpdate()
-    {
-        return NodeState.Running;
-    }
-    
-    public override void OnStop()
-    {
-        base.OnStop();
+        return new EnemyIdleRuntimeNode();
     }
 }
 

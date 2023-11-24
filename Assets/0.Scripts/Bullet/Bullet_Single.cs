@@ -48,7 +48,6 @@ public class Bullet_Single : BulletBase
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter2D");
         if (!isActive) return;
         
         //TODO：判断是不是敌人，如果是敌人，则对它造成伤害

@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace MyEditor.BehaviourTree
+namespace Seyang.BehaviourTree
 {
     //��BehaviorTree�༭���Ĵ���
     public class BehaviourTreeEditor : EditorWindow

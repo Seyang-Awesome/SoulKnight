@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
-namespace MyEditor.BehaviourTree
+namespace Seyang.BehaviourTree
 {
     //BehaviourTreeEditor视图中的行为树编辑视图部分
     public class BehaviourTreeView : GraphView
@@ -94,11 +94,7 @@ namespace MyEditor.BehaviourTree
             if (bt == null) return;
 
             if (bt.rootNode == null)
-            {
-                bt.rootNode = bt.CreateNode(typeof(RootNode));;
-                EditorUtility.SetDirty(bt);
-                AssetDatabase.SaveAssets();
-            }
+                bt.rootNode = CreateNode(typeof(RootNode), Vector2.zero);
 
             bt.nodes.ForEach(n => CreateNodeView(n,n.posInView));
 
