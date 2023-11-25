@@ -12,4 +12,22 @@ namespace Seyang.BehaviourTree
             return new RootRuntimeNode();
         }
     }
+    
+    public class RootRuntimeNode : RuntimeNodeBase
+    {
+        public RuntimeNodeBase child;
+
+        public override void OnStart()
+        {
+        }
+
+        public override void OnStop()
+        {
+        }
+
+        public override NodeState OnUpdate()
+        {
+            return child.Update();
+        }
+    }
 }

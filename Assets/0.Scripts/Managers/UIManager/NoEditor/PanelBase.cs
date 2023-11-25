@@ -77,7 +77,7 @@ public abstract class PanelBase : MonoBehaviour
     /// </summary>
     protected void HideSelf()
     {
-        UIManager.instance.HidePanel(this.GetType());
+        UIManager.Instance.HidePanel(this.GetType());
     }
 
     /// <summary>
@@ -87,7 +87,7 @@ public abstract class PanelBase : MonoBehaviour
     {
         isShowing = false;
         onHideCallback?.Invoke();
-        UIManager.instance.ClearPanelCache(this.GetType());
+        UIManager.Instance.ClearPanelCache(this.GetType());
     }
 }
 

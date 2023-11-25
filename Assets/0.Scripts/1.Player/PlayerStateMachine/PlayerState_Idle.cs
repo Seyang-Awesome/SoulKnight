@@ -6,7 +6,7 @@ public class PlayerState_Idle : PlayerState
 {
     public override void Enter()
     {
-        controller.PlayAnimation(AniamtionType.Idle);
+        controller.PlayAnimation(AnimationType.Idle);
     }
 
     public override void PhysicsUpdate()

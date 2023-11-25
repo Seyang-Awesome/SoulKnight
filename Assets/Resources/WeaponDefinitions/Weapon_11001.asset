@@ -19,7 +19,7 @@ MonoBehaviour:
   damage: 0
   powerConsume: 0
   critiChance: 0
-  accuracy: 0
+  accuracy: 5
   attackInterval: 0.4
   comboTime: 0
   bullets:

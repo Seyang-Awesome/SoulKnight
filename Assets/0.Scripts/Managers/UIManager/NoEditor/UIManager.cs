@@ -56,7 +56,7 @@ public class UIManager : MonoSingleton<UIManager>
         int relevantPanelSortingLayer = relevantPanel.panelSortingLayer;
         if (isHavePanelShowLayer[relevantPanel.panelSortingLayer]) return null;
         
-        PanelBase panel = PoolManager.instance.GetGameObject(relevantPanel,panelLayers[relevantPanelSortingLayer].transform);
+        PanelBase panel = PoolManager.Instance.GetGameObject(relevantPanel,panelLayers[relevantPanelSortingLayer].transform);
         panel.OnShow();
         
         panelOnShowing.Add(panelType,panel);
@@ -89,7 +89,7 @@ public class UIManager : MonoSingleton<UIManager>
 
         if (relevantPanel.isHideDirectly)
         {
-            PoolManager.instance.PushGameObject(relevantPanel.gameObject);
+            PoolManager.Instance.PushGameObject(relevantPanel.gameObject);
             panelOnShowing.Remove(panelType);
             isHavePanelShowLayer[relevantPanel.panelSortingLayer] = false;
             panelLayers[relevantPanelSortingLayer].raycastTarget = false;
@@ -110,7 +110,7 @@ public class UIManager : MonoSingleton<UIManager>
         PanelBase relevantPanel = panelOnShowing[panelType];
         int relevantPanelSortingLayer = relevantPanel.panelSortingLayer;
         
-        PoolManager.instance.PushGameObject(relevantPanel.gameObject);
+        PoolManager.Instance.PushGameObject(relevantPanel.gameObject);
         panelOnShowing.Remove(panelType);
         isHavePanelShowLayer[relevantPanel.panelSortingLayer] = false;
         panelLayers[relevantPanelSortingLayer].raycastTarget = false;

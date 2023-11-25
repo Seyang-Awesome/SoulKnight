@@ -21,6 +21,6 @@ public abstract class PlayerState : IState
         this.info = info;
         this.stateMachine = stateMachine;
         this.controller = controller;
-        input = GameInput.instance;
+        input = GameInput.Instance;
     }
 }

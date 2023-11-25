@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Direction = UnityEditor.Experimental.GraphView.Direction;
 
 namespace Seyang.BehaviourTree
 {
@@ -30,15 +31,18 @@ namespace Seyang.BehaviourTree
         {
             if(node is CompositeNode)
             {
-                input = InstantiatePort(Orientation.Horizontal,Direction.Input,Port.Capacity.Single,typeof(NodeView));
+                input = InstantiatePort(Orientation.Horizontal,UnityEditor.Experimental.GraphView.Direction.Input,
+                    Port.Capacity.Single,typeof(NodeView));
             }
             else if(node is DecoratorNode)
             {
-                input = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(NodeView));
+                input = InstantiatePort(Orientation.Horizontal, UnityEditor.Experimental.GraphView.Direction.Input,
+                    Port.Capacity.Single, typeof(NodeView));
             }
             else if(node is ActionNode)
             {
-                input = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(NodeView));
+                input = InstantiatePort(Orientation.Horizontal, UnityEditor.Experimental.GraphView.Direction.Input,
+                    Port.Capacity.Single, typeof(NodeView));
             }
             else if (node is RootNode)
             {
@@ -57,11 +61,13 @@ namespace Seyang.BehaviourTree
         {
             if (node is CompositeNode)
             {
-                output = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Multi, typeof(NodeView));
+                output = InstantiatePort(Orientation.Horizontal, UnityEditor.Experimental.GraphView.Direction.Output,
+                    Port.Capacity.Multi, typeof(NodeView));
             }
             else if (node is DecoratorNode)
             {
-                output = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(NodeView));
+                output = InstantiatePort(Orientation.Horizontal, UnityEditor.Experimental.GraphView.Direction.Output,
+                    Port.Capacity.Single, typeof(NodeView));
             }
             else if (node is ActionNode)
             {
@@ -70,7 +76,8 @@ namespace Seyang.BehaviourTree
             }
             else if (node is RootNode)
             {
-                output = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(NodeView));
+                output = InstantiatePort(Orientation.Horizontal, UnityEditor.Experimental.GraphView.Direction.Output,
+                    Port.Capacity.Single, typeof(NodeView));
             }
 
             if (output != null)

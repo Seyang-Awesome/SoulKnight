@@ -10,7 +10,11 @@ public class BtRunner : MonoBehaviour
     public BehaviourTreeConfig bt;
     private RootRuntimeNode rootRuntimeNode;
     private NodeRuntimeData nodeData;
-    public event Action onFixedUpdate;
+    public event Action OnFixedUpdate;
+    public event Action<Collision2D> OnCollisionEnter;
+    public event Action<Collision2D> OnCollisionExit;
+    public event Action<Collider2D> OnTriggerEnter;
+    public event Action<Collider2D> OnTriggerExit;
     
     private void Start()
     {
@@ -22,12 +26,32 @@ public class BtRunner : MonoBehaviour
 
     private void FixedUpdate()
     {
-        onFixedUpdate?.Invoke();
+        OnFixedUpdate?.Invoke();
     }
 
     private void Update()
     {
         rootRuntimeNode.Update();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        OnCollisionEnter?.Invoke(collision);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        OnCollisionExit?.Invoke(collision);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        OnTriggerEnter?.Invoke(other);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        OnTriggerExit?.Invoke(other);
     }
 
     private RuntimeNodeBase CloneBtTreeToRuntime(NodeBase rootNode)

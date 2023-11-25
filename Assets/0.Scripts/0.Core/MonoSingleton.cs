@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    public static T instance;
+    public static T Instance;
     public virtual void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = GetComponent<T>();
+            Instance = GetComponent<T>();
             DontDestroyOnLoad(gameObject);
         }
-        else if(instance != this) Destroy(gameObject);
+        else if(Instance != this) Destroy(gameObject);
     }
 }

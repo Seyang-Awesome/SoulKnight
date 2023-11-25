@@ -33,6 +33,6 @@ public class ParticleManager : MonoBehaviour
 
     private void OnDestroyParticle()
     {
-        PoolManager.instance.PushGameObject(gameObject);
+        PoolManager.Instance.PushGameObject(gameObject);
     }
 }

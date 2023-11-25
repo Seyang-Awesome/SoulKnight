@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public static class SeyangExtension
 {
@@ -34,7 +35,13 @@ public static class SeyangExtension
         }
         return derivedClasses;
     }
-    
+
+    public static Vector2 GetRandomDirection()
+    {
+        float x = Random.Range(-1f, 1f);
+        float y = Random.Range(-1f, 1f); 
+        return new Vector2(x, y).normalized;
+    }
 }
 
 #region InvokableAction

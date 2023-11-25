@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerTeam
+  - EnemyTeam
   layers:
   - Default
   - TransparentFX
@@ -13,26 +15,26 @@ TagManager:
   - UI
   - Player
   - Enemy
+  - Pet
   - 
   - 
-  - 
-  - Bullet
+  - PlayerBullet
   - EnemyBullet
   - 
   - 
   - 
+  - Map
   - 
   - 
   - 
   - 
+  - PlayerCollider
+  - EnemyCollider
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerTrigger
+  - EnemyTrigger
   - 
   - 
   - 
@@ -47,7 +49,10 @@ TagManager:
   - name: Wall
     uniqueID: 221841981
     locked: 0
-  - name: Entity
+  - name: Enemy
+    uniqueID: 2955630931
+    locked: 0
+  - name: Player
     uniqueID: 1858707555
     locked: 0
   - name: Bullet

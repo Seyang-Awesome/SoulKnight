@@ -4,7 +4,8 @@ using UnityEngine;
 public class PlayerInfo : MonoBehaviour
 {
     [SerializeField] public Rigidbody2D rb;
-    [SerializeField] public BoxCollider2D collider;
+    [SerializeField] public new Collider2D collider;
+    [SerializeField] public Collider2D trigger;
     [SerializeField] public SpriteRenderer playerSprite;
     [SerializeField] public Animator playerAnimator;
 
@@ -17,6 +18,13 @@ public class PlayerInfo : MonoBehaviour
 
     private void Start()
     {
-        input = GameInput.instance;
+        input = GameInput.Instance;
     }
+
+    // private void OnTriggerStay2D(Collider2D other)
+    // {
+    //     Debug.Log(555);
+    // }
+
+
 }

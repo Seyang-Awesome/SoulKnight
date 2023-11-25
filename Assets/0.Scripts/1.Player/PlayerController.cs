@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInfo info;
     private Animator animator;
     private Rigidbody2D rb;
-    private Dictionary<AniamtionType, string> animationNameDic;
+    private Dictionary<AnimationType, string> animationNameDic;
     
     private Vector2 playerScale;
     private Vector2 inversePlayerScale;
@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
     {
         animationNameDic = new()
         {
-            { AniamtionType.Idle, "Idle" },
-            { AniamtionType.Move, "Move" },
-            { AniamtionType.Die, "Die" },
+            { AnimationType.Idle, "Idle" },
+            { AnimationType.Move, "Move" },
+            { AnimationType.Die, "Die" },
         };
         
         info = GetComponent<PlayerInfo>();
@@ -41,9 +41,9 @@ public class PlayerController : MonoBehaviour
 
     public void SetFaceDirection()
     {
-        if (rb.velocity.x > Consts.tinyNum)
+        if (rb.velocity.x > Consts.TinyNum)
             playerSrTransfrom.localScale = playerScale;
-        else if (rb.velocity.x < -Consts.tinyNum)
+        else if (rb.velocity.x < -Consts.TinyNum)
             playerSrTransfrom.localScale = inversePlayerScale;
     }
 
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         SetVelocity(new Vector2(rb.velocity.x, velocity), dragFactor);
     }
 
-    public void PlayAnimation(AniamtionType type)
+    public void PlayAnimation(AnimationType type)
     {
         animator.Play(animationNameDic[type]);
     }

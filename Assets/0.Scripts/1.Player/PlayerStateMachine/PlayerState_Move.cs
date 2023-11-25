@@ -6,7 +6,7 @@ public class PlayerState_Move : PlayerState
 {
     public override void Enter()
     {
-        controller.PlayAnimation(AniamtionType.Move);
+        controller.PlayAnimation(AnimationType.Move);
     }
 
     public override void PhysicsUpdate()
