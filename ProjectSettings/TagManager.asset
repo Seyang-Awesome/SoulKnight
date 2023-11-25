@@ -20,7 +20,7 @@ TagManager:
   - 
   - PlayerBullet
   - EnemyBullet
-  - 
+  - Ignore
   - 
   - 
   - Map
@@ -48,6 +48,9 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 221841981
+    locked: 0
+  - name: DeadEnemy
+    uniqueID: 976832053
     locked: 0
   - name: Enemy
     uniqueID: 2955630931

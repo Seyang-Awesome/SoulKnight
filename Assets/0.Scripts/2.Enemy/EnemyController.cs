@@ -1,21 +1,21 @@
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class EnemyControllerBase : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     [Header("Base")]
     
-    [SerializeField]
-    protected EnemyInfo info;
-    [SerializeField]
-    protected Animator animator;
-    [SerializeField]
-    protected new Collider2D collider;
-    [SerializeField] 
-    protected Collider2D trigger;
-    [SerializeField]
-    protected Rigidbody2D rb;
+    [SerializeField] protected EnemyInfo info;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected new Collider2D collider;
+    [SerializeField] protected Collider2D trigger;
+    [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] protected BtRunner btRunner;
+    
+    [SerializeField] protected EnemyDieHandler enemyDieHandlerPrefab;
     
     private Dictionary<AnimationType, string> animationNameDic;
     
@@ -32,14 +32,16 @@ public class EnemyControllerBase : MonoBehaviour
             { AnimationType.Move, "Move" },
             { AnimationType.Die, "Die" },
         };
-        
-        // info = GetComponent<EnemyInfo>();
-        // animator = GetComponent<Animator>();
-        // rb = GetComponent<Rigidbody2D>();
-        // collider = GetComponent<BoxCollider2D>();
+
+        info.onEnemyDie += OnEnemyDie;
         
         enemyScale = transform.localScale;
         inverseEnemyScale = new Vector3(-enemyScale.x, enemyScale.y);
+    }
+
+    private void OnDestroy()
+    {
+        info.onEnemyDie -= OnEnemyDie;
     }
 
     protected virtual void Update()
@@ -82,25 +84,25 @@ public class EnemyControllerBase : MonoBehaviour
         int result = 0;
         Vector2 CenterPos = info.CenterPos;
         if (Physics2D.Raycast(CenterPos, Vector2.up,
-                RayLength, 1 << Consts.MapLayer))
+                Consts.WallDetectLength, 1 << Consts.MapLayer))
         {
             result |= (int)Direction.Up;
         }
         
         if (Physics2D.Raycast(CenterPos, Vector2.down,
-                RayLength, 1 << Consts.MapLayer))
+                Consts.WallDetectLength, 1 << Consts.MapLayer))
         {
             result |= (int)Direction.Down;
         }
         
         if (Physics2D.Raycast(CenterPos, Vector2.left,
-                RayLength, 1 << Consts.MapLayer))
+                Consts.WallDetectLength, 1 << Consts.MapLayer))
         {
             result |= (int)Direction.Left;
         }
         
         if (Physics2D.Raycast(CenterPos, Vector2.right,
-                RayLength, 1 << Consts.MapLayer))
+                Consts.WallDetectLength, 1 << Consts.MapLayer))
         {
             result |= (int)Direction.Right;
         }
@@ -143,6 +145,14 @@ public class EnemyControllerBase : MonoBehaviour
     public virtual void Attack()
     {
         
+    }
+
+    private void OnEnemyDie(EnemyDieInfo info)
+    {
+        PoolManager.Instance.PushGameObject(this.gameObject);
+        EnemyDieHandler enemyDieHandler = PoolManager.Instance.GetGameObject<EnemyDieHandler>(enemyDieHandlerPrefab);
+        enemyDieHandler.Init(info);
+        enemyDieHandler.transform.position = transform.position;
     }
     
 // #if UNITY_EDITOR

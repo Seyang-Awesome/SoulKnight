@@ -10,7 +10,7 @@ public class HurtInfo
     public HurtInfo(int damage, Vector2 damageSource)
     {
         Damage = damage;
-        DamageDirection = damageSource;
+        DamageDirection = damageSource.normalized;
     }
 }
 

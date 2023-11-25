@@ -7,16 +7,22 @@ public class PlayerState_Idle : PlayerState
     public override void Enter()
     {
         controller.PlayAnimation(AnimationType.Idle);
+        controller.SetVelocity(Vector2.zero);
     }
 
     public override void PhysicsUpdate()
     {
-        controller.SetVelocity(Vector2.zero);
     }
 
     public override void LogicUpdate()
     {
-        if (info.moveAction)
+        if (info.hurt)
+        {
+            stateMachine.SwitchState<PlayerState_Hurt>();
+            return;
+        }
+        
+        if (info.MoveAction)
         {
             stateMachine.SwitchState<PlayerState_Move>();
             return;

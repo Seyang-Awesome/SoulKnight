@@ -23,11 +23,7 @@ public class EnemyIdleRuntimeNode : EnemyRuntimeActionNodeBase
 
     public override void OnStop()
     {
-        
-    }
-    
-    protected override void OnFixedUpdate()
-    {
+        base.OnStop();
     }
 
     public override NodeState OnUpdate()

@@ -9,7 +9,8 @@ public class PlayerStateMchine : StateMachine
         stateDic = new()
         {
             { typeof(PlayerState_Idle), new PlayerState_Idle() },
-            { typeof(PlayerState_Move), new PlayerState_Move() }
+            { typeof(PlayerState_Move), new PlayerState_Move() },
+            { typeof(PlayerState_Hurt), new PlayerState_Hurt() },
         };
 
         PlayerInfo info = GetComponent<PlayerInfo>();

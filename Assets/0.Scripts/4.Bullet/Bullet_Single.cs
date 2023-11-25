@@ -58,13 +58,10 @@ public class Bullet_Single : BulletBase
     {
         if (!isActive) return;
         
-        //TODO：判断是不是敌人，如果是敌人，则对它造成伤害
         if (other.CompareTag(Consts.EnemyTeamTag))
         {
-            Debug.Log("Touch");
             HurtInfo hurtInfo = new(wd.damage,other.bounds.center - transform.position);
             other.GetComponent<Hurtable>().Hurt(hurtInfo);
-
         }
         
         OnTouchEntity();

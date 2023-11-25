@@ -22,15 +22,15 @@ public class EnemyMoveToPlayerRuntimeNode : EnemyRuntimeActionNodeBase
 {
     private Vector2 direction;
 
-    private const float ContinueMoveTime = 0.5f;
+    private const float ContinueMoveTime = 0.2f;
     private float counter;
     private bool isTouched;
     public override void OnStart()
     {
         base.OnStart();
         Controller.PlayAnimation(AnimationType.Move);
+        
         direction = (Info.TargetPos - Info.CenterPos).normalized;
-        direction = AdjustMoveDirection(direction);
 
         counter = ContinueMoveTime;
         isTouched = false;
@@ -38,8 +38,9 @@ public class EnemyMoveToPlayerRuntimeNode : EnemyRuntimeActionNodeBase
         Controller.SetVelocity(direction * Info.moveSpeed);
     }
 
-    protected override void OnFixedUpdate()
+    public override void OnStop()
     {
+        base.OnStop();
     }
 
     protected override void OnCollisionEnter(Collision2D collision)
@@ -57,8 +58,8 @@ public class EnemyMoveToPlayerRuntimeNode : EnemyRuntimeActionNodeBase
     {
         if (isTouched)
         {
-            counter += Time.deltaTime;
-            if (counter >= ContinueMoveTime)
+            counter -= Time.deltaTime;
+            if (counter <= 0f)
                 return NodeState.Success;
         }
         return NodeState.Running;

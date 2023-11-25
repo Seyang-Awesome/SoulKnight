@@ -5,16 +5,16 @@ using UnityEngine;
 
 public abstract class EnemyRuntimeActionNodeBase : ActionRuntimeNode
 {
-    private EnemyComponentsBase components;
+    private EnemyComponents components;
     protected EnemyInfo Info;
-    protected EnemyControllerBase Controller;
+    protected EnemyController Controller;
 
     public override void OnStart()
     {
         base.OnStart();
         if (components == null)
         {
-            components = data.gameObject.GetComponent<EnemyComponentsBase>();
+            components = data.gameObject.GetComponent<EnemyComponents>();
             Info = components.info;
             Controller = components.controller;
         }

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController_21001 : EnemyControllerBase
+public class EnemyController_21001 : EnemyController
 {
     [Header("21001")] 
     

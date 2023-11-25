@@ -16,7 +16,13 @@ public class PlayerState_Move : PlayerState
 
     public override void LogicUpdate()
     {
-        if (info.isIdling)
+        if (info.hurt)
+        {
+            stateMachine.SwitchState<PlayerState_Hurt>();
+            return;
+        }
+        
+        if (info.IsIdling)
         {
             stateMachine.SwitchState<PlayerState_Idle>();
             return;

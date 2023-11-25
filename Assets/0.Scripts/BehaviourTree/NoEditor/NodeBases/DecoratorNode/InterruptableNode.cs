@@ -22,12 +22,18 @@ namespace Seyang.BehaviourTree
         public InterruptableRuntimeNode(float duration)
         {
             this.duration = duration;
-            counter = 0;
         }
+
+        public override void OnStart()
+        {
+            base.OnStart();
+            counter = duration;
+        }
+
         public override NodeState OnUpdate()
         {
-            counter += Time.deltaTime;
-            if (counter >= duration) return NodeState.Success;
+            counter -= Time.deltaTime;
+            if (counter <= 0) return NodeState.Success;
             NodeState state = child.Update();
             return (state == NodeState.Success || state == NodeState.Failure) 
                 ? NodeState.Success : NodeState.Running;
