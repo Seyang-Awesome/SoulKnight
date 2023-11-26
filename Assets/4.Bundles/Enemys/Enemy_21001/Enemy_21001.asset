@@ -118,15 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4fb344f9e6757c47877ddabdc2580f0, type: 3}
   m_Name: Enemy_21001
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
   rootNode: {fileID: -3179094992114059746}
   nodes:
   - {fileID: -3179094992114059746}

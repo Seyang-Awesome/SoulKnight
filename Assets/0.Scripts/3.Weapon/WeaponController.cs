@@ -13,6 +13,7 @@ namespace WeaponSystem
         [SerializeField] private WeaponDefinitionBase testWeapon2;
 
         private GameInput input;
+        private PlayerInfo info;
         private Rigidbody2D rb;
         private Vector2 weaponScale;
         private Vector2 inverseWeaponScale;
@@ -29,7 +30,7 @@ namespace WeaponSystem
             get
             {
                 if (currentWeaponNum == 0) return -1;
-                if (currentWeaponNum == 0) return currentWeaponIndex;
+                if (currentWeaponNum == 1) return currentWeaponIndex;
                 return (currentWeaponIndex + 1) % currentWeaponNum;
             }
         }
@@ -38,6 +39,7 @@ namespace WeaponSystem
         {
             currentWeapon = null;
             input = GameInput.Instance;
+            info = GetComponent<PlayerInfo>();
             rb = GetComponent<Rigidbody2D>();
             
             weaponScale = transform.localScale;
@@ -116,12 +118,20 @@ namespace WeaponSystem
 
         private void SetFaceDirection()
         {
-            if (rb.velocity.x > Consts.TinyNum)
-                weaponRoot.localScale = weaponScale;
-            else if (rb.velocity.x < -Consts.TinyNum)
-                weaponRoot.localScale = inverseWeaponScale;
-            if(input.moveInput != Vector2.zero)
-                weaponRoot.right = input.moveInput * scaleIndex;
+            if (info.target != null)
+            {
+                weaponRoot.localScale = info.TargetDirectionCoefficient == 1 ? weaponScale : inverseWeaponScale;
+                weaponRoot.right = info.TargetDirection * -scaleIndex;
+            }
+            else
+            {
+                if (rb.velocity.x > Consts.TinyNum)
+                    weaponRoot.localScale = weaponScale;
+                else if (rb.velocity.x < -Consts.TinyNum)
+                    weaponRoot.localScale = inverseWeaponScale;
+                if(input.moveInput != Vector2.zero)
+                    weaponRoot.right = input.moveInput * scaleIndex;
+            }
         }
     }
 }

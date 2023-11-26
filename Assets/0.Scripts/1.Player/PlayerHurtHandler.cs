@@ -10,5 +10,6 @@ public class PlayerHurtHandler : Hurtable
         playerInfo.Hurt(hurtInfo);
         Flash();
     }
+    
 }
 

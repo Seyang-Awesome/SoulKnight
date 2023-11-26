@@ -16,7 +16,7 @@ public class BtRunner : MonoBehaviour
     public event Action<Collider2D> OnTriggerEnter;
     public event Action<Collider2D> OnTriggerExit;
     
-    private void Start()
+    private void OnEnable()
     {
         bt = Instantiate(bt); 
         nodeData = new NodeRuntimeData(this, gameObject);
@@ -37,6 +37,7 @@ public class BtRunner : MonoBehaviour
         OnCollisionExit = null;
         OnTriggerEnter = null;
         OnTriggerExit = null;
+        GetComponent<EnemyInfo>().onEnemyDie -= OnEnemyDie;
     }
 
     private void FixedUpdate()

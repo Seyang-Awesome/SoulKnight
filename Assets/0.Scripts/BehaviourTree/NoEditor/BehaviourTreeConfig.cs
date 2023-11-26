@@ -1,13 +1,12 @@
-using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using Sirenix.Utilities;
 
 namespace Seyang.BehaviourTree
 {
     [CreateAssetMenu()]
-    public class BehaviourTreeConfig : SerializedScriptableObject
+    public class BehaviourTreeConfig : ScriptableObject
     {
         [SerializeField]
         public NodeBase rootNode;
@@ -79,7 +78,7 @@ namespace Seyang.BehaviourTree
             if (parent is CompositeNode)
             {
                 CompositeNode node = (parent as CompositeNode);
-                if(!node.children.IsNullOrEmpty())
+                if(!node.children.IsUnityNull() && node.children.Count > 0)
                     nodes = node.children;
             }
             else if (parent is DecoratorNode)

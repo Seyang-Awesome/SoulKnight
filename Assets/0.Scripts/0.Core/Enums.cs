@@ -6,6 +6,32 @@ public enum AnimationType
     Die
 }
 
+public enum RoomType
+{
+    Start,
+    End,
+    Common,
+    Store,
+    Chest,
+    Boss,
+}
+
+public enum RoomSize
+{
+    Small,
+    Middle,
+    Large,
+}
+
+public enum TilemapLayer
+{
+    Background,
+    Wall,
+    Foreground,
+    Shadow,
+    Door,
+}
+
 public enum Direction
 {
     Up = 0x001,

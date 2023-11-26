@@ -13,5 +13,7 @@ public class EnemyHurtHandler : Hurtable
         if(enemyInfo.backable)
             Back(hurtInfo);
     }
+
+    
 }
 

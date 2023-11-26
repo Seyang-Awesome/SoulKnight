@@ -34,18 +34,18 @@ public class EnemyInfo : MonoBehaviour
     }
 
     public bool backable;
-
+    
+    private void OnEnable()
+    {
+        Init();
+    }
+    
     public void Init()
     {
         currentHealth = basicHealth;
         backable = true;
     }
-
-    private void Start()
-    {
-        Init();
-    }
-
+    
     public void Hurt(HurtInfo hurtInfo)
     {
         currentHealth -= hurtInfo.Damage;

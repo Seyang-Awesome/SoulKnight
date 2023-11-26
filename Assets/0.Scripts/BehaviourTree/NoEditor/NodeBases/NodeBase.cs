@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
 using System;
 using UnityEngine.Serialization;
 
@@ -13,8 +12,8 @@ namespace Seyang.BehaviourTree
         public abstract Type relevantType { get; }
         
         //存储数据
-        [ReadOnly]public string guid;
-        [ReadOnly]public Vector2 posInView;
+        [SerializeField,HideInInspector]public string guid;
+        [SerializeField,HideInInspector]public Vector2 posInView;
         
         //编辑行为树函数
         public virtual NodeBase CloneNode()

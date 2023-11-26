@@ -42,6 +42,40 @@ public static class SeyangExtension
         float y = Random.Range(-1f, 1f); 
         return new Vector2(x, y).normalized;
     }
+
+    public static Vector2 GetRelevantDirection(this Direction direction)
+    {
+        if (direction == Direction.Up)
+            return Vector2.up;
+        else if (direction == Direction.Down)
+            return Vector2.down;
+        else if (direction == Direction.Left)
+            return Vector2.left;
+        else
+            return Vector2.right;
+    }
+
+    public static Vector2 GetVerticalDirection(this Vector2 direction)
+    {
+        if (direction.x != 0f && direction.y != 0) return Vector2Int.zero;
+
+        return direction.x == 0 ? Vector2Int.right : Vector2Int.up;
+    }
+
+    public static Vector2Int GetVerticalDirection(this Vector2Int direction)
+    {
+        return direction.ToVector2().GetVerticalDirection().ToVector2Int();
+    }
+
+    public static Vector2Int ToVector2Int(this Vector2 vector)
+    {
+        return new Vector2Int((int)(vector.x), (int)(vector.y));
+    }
+
+    public static Vector2 ToVector2(this Vector2Int vector)
+    {
+        return new Vector2(vector.x,vector.y);
+    }
 }
 
 #region InvokableAction

@@ -25,7 +25,7 @@ public class Bullet_Single : BulletBase
         transform.Rotate(new Vector3(0,0,Random.Range((float)-accuracy, (float)accuracy)));
         rb.velocity = transform.right.normalized * velocity;
 
-        appearCounter = Consts.BulletDisapperTime;
+        appearCounter = Consts.BulletDisappearTime;
         isActive = true;
 
         this.wd = wd;

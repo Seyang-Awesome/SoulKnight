@@ -60,25 +60,25 @@ public class EnemyDieHandler : MonoBehaviour
         int result = 0;
         Vector2 CenterPos = collider.bounds.center;
         if (Physics2D.Raycast(CenterPos, Vector2.up,
-                Consts.WallDetectLength, 1 << Consts.MapLayer))
+                Consts.WallDetectLength, Consts.MapLayerMask))
         {
             result |= (int)Direction.Up;
         }
         
         if (Physics2D.Raycast(CenterPos, Vector2.down,
-                Consts.WallDetectLength, 1 << Consts.MapLayer))
+                Consts.WallDetectLength, Consts.MapLayerMask))
         {
             result |= (int)Direction.Down;
         }
         
         if (Physics2D.Raycast(CenterPos, Vector2.left,
-                Consts.WallDetectLength, 1 << Consts.MapLayer))
+                Consts.WallDetectLength, Consts.MapLayerMask))
         {
             result |= (int)Direction.Left;
         }
         
         if (Physics2D.Raycast(CenterPos, Vector2.right,
-                Consts.WallDetectLength, 1 << Consts.MapLayer))
+                Consts.WallDetectLength, Consts.MapLayerMask))
         {
             result |= (int)Direction.Right;
         }

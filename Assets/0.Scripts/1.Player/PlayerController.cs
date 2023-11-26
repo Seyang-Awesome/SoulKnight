@@ -41,10 +41,15 @@ public class PlayerController : MonoBehaviour
 
     public void SetFaceDirection()
     {
-        if (rb.velocity.x > Consts.TinyNum)
-            playerSrTransfrom.localScale = playerScale;
-        else if (rb.velocity.x < -Consts.TinyNum)
-            playerSrTransfrom.localScale = inversePlayerScale;
+        if (info.target != null)
+            playerSrTransfrom.localScale = info.TargetDirection.x <= 0 ? playerScale : inversePlayerScale;
+        else
+        {
+            if (rb.velocity.x > Consts.TinyNum)
+                playerSrTransfrom.localScale = playerScale;
+            else if (rb.velocity.x < -Consts.TinyNum)
+                playerSrTransfrom.localScale = inversePlayerScale;
+        }
     }
 
     public void SetVelocity(Vector2 velocity, float dragFactor = 0)
