@@ -5,39 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EnemyDieHandlerManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EnemyDieHandlerManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinitionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinitionBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGameBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Rifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Rifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyComponents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyComponents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponComponentTypeGetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/WeaponComponentTypeGetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponComponentTypeGetter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/WeaponComponentTypeGetter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/EnemyDieInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EnemyDieInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Effects/FireFlower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Effects/FireFlower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/EnemyDieHandler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/EnemyDieHandler.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/BlankRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/BlankRoom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/ExampleRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/ExampleRoom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/RoomTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/RoomTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Weapons/WeaponContainer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Weapons/WeaponContainer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001/Bullet_001.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001/Bullet_001.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001/Bullet_001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001/Bullet_001.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001/Die.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001/Die.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001/Fly.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001/Fly.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions/Weapon_11001.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions/Weapon_11001.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions/Weapon_12001.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDefinitions/Weapon_12001.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PlayerInputActions.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PlayerInputActions.inputactions.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Forest/Forest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Forest/Forest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Ground/Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Ground/Ground.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Bullet/Bullet_002.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +140,7 @@
       <workItem from="1700997299189" duration="4763000" />
       <workItem from="1701014987662" duration="5864000" />
       <workItem from="1701062282452" duration="15321000" />
+      <workItem from="1701092524018" duration="990000" />
     </task>
     <servers />
   </component>

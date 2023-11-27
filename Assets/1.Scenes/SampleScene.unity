@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 1944349648}
   - component: {fileID: 1944349647}
   - component: {fileID: 1944349646}
-  - component: {fileID: 1944349645}
+  - component: {fileID: 1944349649}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -752,18 +752,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1944349645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944349642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93c35de2ff714855a44702c41f838978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1944349646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,6 +789,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolRootGameObject: {fileID: 0}
+--- !u!114 &1944349649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944349642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139cbf47007e4151b71d79c495a0bf4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDieHandlerPrefab: {fileID: 3941487659439892865, guid: 09780ca51a90be440bef336add561f49, type: 3}
 --- !u!61 &12066157719684208
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1451,7 +1452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4521285134101951711, guid: 2f93d43f87950e140b084cc4787af3f8, type: 3}
       propertyPath: m_Name
-      value: Bullet_001
+      value: Bullet_30001
       objectReference: {fileID: 0}
     - target: {fileID: 4521285134101951711, guid: 2f93d43f87950e140b084cc4787af3f8, type: 3}
       propertyPath: m_IsActive
@@ -2199,11 +2200,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1545771548087416474, guid: 39a56669cd291c44abd8b97be09ebf70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.49
+      value: -10.37
       objectReference: {fileID: 0}
     - target: {fileID: 1545771548087416474, guid: 39a56669cd291c44abd8b97be09ebf70, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.68
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 1545771548087416474, guid: 39a56669cd291c44abd8b97be09ebf70, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2258,13 +2259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ccb0b63d54aa68b780275b2a8cdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: {fileID: 6772135430607156410}
-  animator: {fileID: 8754163117565503484}
-  collider: {fileID: 4462188398902278875}
-  trigger: {fileID: 5374126769337128128}
-  rb: {fileID: 7563407053895216201}
-  btRunner: {fileID: 4545271327145450075}
-  enemyDieHandlerPrefab: {fileID: 3941487659439892865, guid: 09780ca51a90be440bef336add561f49, type: 3}
   attackRadius: 0.8
   attackPower: 5
 --- !u!61 &3001154800123216679
@@ -4078,7 +4072,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0, y: 0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -4089,7 +4083,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 0.8, y: 1.1}
   m_EdgeRadius: 0.1
 --- !u!4 &5495393943115648947
 Transform:
@@ -5277,7 +5271,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7162142372787028043, guid: 08ee0c95133ab8649a80eae7f2bf05f5, type: 3}
       propertyPath: m_Name
-      value: Bullet_002
+      value: Bullet_30002
       objectReference: {fileID: 0}
     - target: {fileID: 7162142372787028043, guid: 08ee0c95133ab8649a80eae7f2bf05f5, type: 3}
       propertyPath: m_IsActive
@@ -5340,13 +5334,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce66ae45b1294663af782018f8531bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  self: {fileID: 5374126769337128128}
   target: {fileID: 0}
   moveSpeed: 5
   dragFactor: 0
   detectPlayerRadius: 8
   basicHealth: 30
-  attackPower: 0
   enemyDieSprite: {fileID: 21300000, guid: df3474790c34f6b4a9d00bef9b6a683d, type: 3}
   _currentHealth: 0
   backable: 0
@@ -5780,7 +5772,7 @@ SpriteRenderer:
   m_SortingLayerID: -1339336365
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 73c3556d15049104ebb29ad896e4449f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1eeb1edae864c6548abb6ae3da6604b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9120,7 +9112,7 @@ Animator:
   m_GameObject: {fileID: 7354151551013754256}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eac9422a2d660b94fb08be7083ae78cb, type: 2}
+  m_Controller: {fileID: 9100000, guid: d1bbc270001bdd842bf50bcfe3d525c6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

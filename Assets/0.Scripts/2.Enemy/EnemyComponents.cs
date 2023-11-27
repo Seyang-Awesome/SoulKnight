@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class EnemyComponents : MonoBehaviour
 {
-    [SerializeField] public EnemyInfo info;
-    [SerializeField] public EnemyController controller;
+    public EnemyInfo info;
+    public EnemyController controller;
+
+    private void Awake()
+    {
+        info = GetComponent<EnemyInfo>();
+        controller = GetComponent<EnemyController>();
+    }
 }
 

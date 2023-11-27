@@ -12,6 +12,10 @@ public class Consts
     public const string FlashAmount = "_FlashAmount";
     public const float BackVelocity = 8f;
     public const float BackTime = 0.1f;
+
+    public const int EnemySpriteIndex = 0;
+    public const int EnemyColliderIndex = 1;
+    public const int EnemyTriggerIndex = 2;
     
     public const float EnemyDieBasicVelocity = 50;
     public const float EnemyDieFlyTime = 1;

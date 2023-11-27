@@ -5,7 +5,6 @@ using UnityEngine.Serialization;
 
 public class EnemyInfo : MonoBehaviour
 {
-    [SerializeField]
     private Collider2D self;
     public Collider2D target;
     public Vector2 CenterPos => self.bounds.center;
@@ -16,7 +15,6 @@ public class EnemyInfo : MonoBehaviour
     public float detectPlayerRadius;
 
     public int basicHealth;
-    public int attackPower;
     public Sprite enemyDieSprite;
     public InvokableAction<EnemyDieInfo> onEnemyDie = new();
 
@@ -44,13 +42,19 @@ public class EnemyInfo : MonoBehaviour
     {
         currentHealth = basicHealth;
         backable = true;
+
+        self = transform.GetChild(Consts.EnemyTriggerIndex).GetComponent<Collider2D>();
     }
     
     public void Hurt(HurtInfo hurtInfo)
     {
         currentHealth -= hurtInfo.Damage;
         if (currentHealth <= 0)
-            onEnemyDie?.Invoke(new EnemyDieInfo(hurtInfo.DamageDirection, enemyDieSprite));
+        {
+            EnemyDieInfo info = new EnemyDieInfo(CenterPos, hurtInfo.DamageDirection, enemyDieSprite);
+            EnemyDieHandlerManager.Instance.OnEnemyDie(this.gameObject,info);
+            onEnemyDie.Invoke(info);
+        }
     }
     
 
@@ -66,7 +70,7 @@ public class EnemyInfo : MonoBehaviour
     
 #if UNITY_EDITOR
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(CenterPos, detectPlayerRadius);

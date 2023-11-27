@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EnemyDieInfo
 {
+    public Vector2 Position { get; private set; }
     public Vector2 Direction { get; private set; }
     public Sprite EnemeyDieSprite { get; private set; }
 
-    public EnemyDieInfo(Vector2 direction, Sprite enemeyDieSprite)
+    public EnemyDieInfo(Vector2 position,Vector2 direction, Sprite enemeyDieSprite)
     {
+        Position = position;
         Direction = direction;
         EnemeyDieSprite = enemeyDieSprite;
     }

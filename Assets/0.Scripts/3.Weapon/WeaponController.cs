@@ -18,6 +18,7 @@ namespace WeaponSystem
         private Vector2 weaponScale;
         private Vector2 inverseWeaponScale;
         
+        private Dictionary<int, Type> weaponTypeDic = new();
         private List<WeaponInGameBase> weaponInGames = new();
         private WeaponInGameBase currentWeapon;
         public int currentWeaponNum => weaponInGames.Count;
@@ -34,9 +35,15 @@ namespace WeaponSystem
                 return (currentWeaponIndex + 1) % currentWeaponNum;
             }
         }
-
+        
         private void Start()
         {
+            weaponTypeDic = new()
+            {
+                {11001,typeof(WeaponInGame_OneShoot)},
+                {12001,typeof(WeaponInGame_Rifle)},
+            };
+            
             currentWeapon = null;
             input = GameInput.Instance;
             info = GetComponent<PlayerInfo>();
@@ -91,7 +98,7 @@ namespace WeaponSystem
         private WeaponInGameBase GetWeaponInstance(WeaponDefinitionBase wd)
         {
             GameObject newWeaponGo = Instantiate(blankWeaponPrefab,weaponRoot);
-            Type relevantType = WeaponComponentTypeGetter.Instance.GetRelevantType(wd.weaponId);
+            Type relevantType = GetRelevantType(wd.weaponId);
             WeaponInGameBase newWeapon = newWeaponGo.AddComponent(relevantType) as WeaponInGameBase;
             newWeapon.Init(wd);
             return newWeapon;
@@ -112,6 +119,11 @@ namespace WeaponSystem
         private void SwitchNextWeapon()
         {
             SwitchWeapon(nextWeaponIndex); 
+        }
+        
+        private Type GetRelevantType(int i)
+        {
+            return weaponTypeDic[i];
         }
 
         #endregion

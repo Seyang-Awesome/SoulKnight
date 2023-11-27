@@ -8,14 +8,12 @@ public class EnemyController : MonoBehaviour
 {
     [Header("Base")]
     
-    [SerializeField] protected EnemyInfo info;
-    [SerializeField] protected Animator animator;
-    [SerializeField] protected new Collider2D collider;
-    [SerializeField] protected Collider2D trigger;
-    [SerializeField] protected Rigidbody2D rb;
-    [SerializeField] protected BtRunner btRunner;
-    
-    [SerializeField] protected EnemyDieHandler enemyDieHandlerPrefab;
+    protected EnemyInfo info;
+    protected Animator animator;
+    protected new Collider2D collider;
+    protected Collider2D trigger;
+    protected Rigidbody2D rb;
+    protected BtRunner btRunner;
     
     private Dictionary<AnimationType, string> animationNameDic;
     
@@ -26,22 +24,23 @@ public class EnemyController : MonoBehaviour
     
     protected virtual void Start()
     {
+        info = GetComponent<EnemyInfo>();
+        animator = transform.GetChild(Consts.EnemySpriteIndex).GetComponent<Animator>();
+        collider = transform.GetChild(Consts.EnemyColliderIndex).GetComponent<Collider2D>();
+        trigger = transform.GetChild(Consts.EnemyTriggerIndex).GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
+        btRunner = GetComponent<BtRunner>();
+        
         animationNameDic = new()
         {
             { AnimationType.Idle, "Idle" },
             { AnimationType.Move, "Move" },
             { AnimationType.Die, "Die" },
         };
-
-        info.onEnemyDie += OnEnemyDie;
+        
         
         enemyScale = transform.localScale;
         inverseEnemyScale = new Vector3(-enemyScale.x, enemyScale.y);
-    }
-
-    private void OnDestroy()
-    {
-        info.onEnemyDie -= OnEnemyDie;
     }
 
     protected virtual void Update()
@@ -146,14 +145,7 @@ public class EnemyController : MonoBehaviour
     {
         
     }
-
-    private void OnEnemyDie(EnemyDieInfo info)
-    {
-        PoolManager.Instance.PushGameObject(this.gameObject);
-        EnemyDieHandler enemyDieHandler = PoolManager.Instance.GetGameObject<EnemyDieHandler>(enemyDieHandlerPrefab);
-        enemyDieHandler.Init(info);
-        enemyDieHandler.transform.position = transform.position;
-    }
+    
     
 // #if UNITY_EDITOR
 //
