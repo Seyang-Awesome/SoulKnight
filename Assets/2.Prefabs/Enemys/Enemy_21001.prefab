@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 5265830364147916499}
   - component: {fileID: 6593307013775435107}
   m_Layer: 7
-  m_Name: EnemuSprite
+  m_Name: EnemySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

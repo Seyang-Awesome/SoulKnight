@@ -8,13 +8,13 @@ namespace WeaponSystem
 {
     public class WeaponInGame_Rifle : WeaponInGameBase
     {
-        private new WeaponDefinition_OneShoot wd;
+        private new WeaponDefinition_Rifle wd;
         private BulletBase bullet;
         public override void Init(WeaponDefinitionBase weaponDefinitionBase)
         {
             base.Init(weaponDefinitionBase);
         
-            wd = weaponDefinitionBase as WeaponDefinition_OneShoot;
+            wd = weaponDefinitionBase as WeaponDefinition_Rifle;
             bullet = wd.bullets[0];
             bulletExitPosTransform.localPosition = wd.bulletExitPos;
         }

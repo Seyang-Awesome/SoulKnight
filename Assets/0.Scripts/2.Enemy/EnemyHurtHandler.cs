@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class EnemyHurtHandler : Hurtable
 {
-    [SerializeField] 
     private EnemyInfo enemyInfo;
+
+    private void Start()
+    {
+        enemyInfo = GetComponentInParent<EnemyInfo>();
+    }
+
     public override void Hurt(HurtInfo hurtInfo)
     {
         enemyInfo.Hurt(hurtInfo);
@@ -13,7 +18,5 @@ public class EnemyHurtHandler : Hurtable
         if(enemyInfo.backable)
             Back(hurtInfo);
     }
-
-    
 }
 

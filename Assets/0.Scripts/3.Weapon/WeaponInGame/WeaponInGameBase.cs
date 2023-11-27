@@ -53,6 +53,8 @@ namespace WeaponSystem
             weaponEffectTransform = transform.GetChild(2);
             weaponSr = weaponSpriteTransform.GetComponent<SpriteRenderer>();
             weaponEffectSr = weaponEffectTransform.GetComponent<SpriteRenderer>();
+
+            weaponSr.sprite = weaponDefinitionBase.inGameSprite;
         }
 
         public virtual void Attack(Vector2 _)

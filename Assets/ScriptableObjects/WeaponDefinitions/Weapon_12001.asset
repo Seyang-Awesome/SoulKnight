@@ -18,13 +18,14 @@ MonoBehaviour:
   uiSprite: {fileID: 21300000, guid: 2aa586ef4f2900c4eb1e6d77179106bb, type: 3}
   damage: 3
   powerConsume: 0
-  critiChance: 0
+  criticalChance: 0
   accuracy: 10
-  attackInterval: 0.15
+  attackInterval: 0.18
   comboTime: 0
-  others: {fileID: 0}
-  bullets: []
-  bulletExitPos: {x: 0, y: 0}
+  others: []
+  bullets:
+  - {fileID: 7356375613462507764, guid: 08ee0c95133ab8649a80eae7f2bf05f5, type: 3}
+  bulletExitPos: {x: 1.2, y: 0.09}
   shakeIntensity: 1
   shakeTime: 0.05
   backTime: 0.05

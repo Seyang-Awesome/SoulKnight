@@ -20,6 +20,6 @@ namespace WeaponSystem
         public float attackInterval;
         public float comboTime;
 
-        public UnityEngine.Object others;
+        public UnityEngine.Object[] others;
     }
 }
