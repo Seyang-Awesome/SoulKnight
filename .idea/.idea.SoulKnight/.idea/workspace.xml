@@ -5,24 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/ProjectExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/ProjectExtension.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/Config.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/Config/RoadConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/Config/RoadConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_Rifle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_Rifle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Rifle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Rifle.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/SeyangExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/SeyangExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponComponentTypeGetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponComponentTypeGetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinitionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinitionBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_OneShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_OneShoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_OneShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_OneShoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomsConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/Config/RoomConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomsConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/Config/RoomConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Z.TestScripts/Test1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Z.TestScripts/Test1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/ExampleRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/ExampleRoom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Forest/Forest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Forest/Forest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3.Textures/Weapon/大刀.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3.Textures/Weapon/大刀.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Ground/Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Ground/Ground.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +136,7 @@
       <workItem from="1700962085984" duration="17817000" />
       <workItem from="1700997299189" duration="4763000" />
       <workItem from="1701014987662" duration="5864000" />
-      <workItem from="1701062282452" duration="9911000" />
+      <workItem from="1701062282452" duration="15321000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,12 @@
 using System;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using WeaponSystem;
 using DG.Tweening;
 
 namespace WeaponSystem
 {
-    public class WeaponInGame_OneShoot : WeaponInGameBase
+    public class WeaponInGame_Rifle : WeaponInGameBase
     {
         private new WeaponDefinition_OneShoot wd;
         private BulletBase bullet;
@@ -34,7 +34,7 @@ namespace WeaponSystem
             isShaking = true;
 
             Vector3 startAngle = new Vector3();
-            Vector3 aimAngle = new Vector3(0, 0, 15 * wd.shakeIntensity);
+            Vector3 aimAngle = new Vector3(0, 0, 5 * wd.shakeIntensity);
             Vector3 startPos = new Vector3();
             Vector3 aimPos = new Vector3(-wd.shakeIntensity / 10, 0, 0);
         
@@ -52,3 +52,4 @@ namespace WeaponSystem
         }
     }
 }
+

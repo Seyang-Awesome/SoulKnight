@@ -14,10 +14,12 @@ namespace WeaponSystem
 
         public int damage;
         public int powerConsume;
-        public int critiChance;
+        public int criticalChance;
         public int accuracy;
     
         public float attackInterval;
         public float comboTime;
+
+        public UnityEngine.Object others;
     }
 }

@@ -1,11 +1,13 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace WeaponSystem
 {
-    [CreateAssetMenu(fileName = "WeaponDefinition", menuName = "Weapon/OneShoot")]
-    public class WeaponDefinition_OneShoot : WeaponDefinitionBase
+    [CreateAssetMenu(fileName = "WeaponDefinition", menuName = "Weapon/Rifle")]
+    public class WeaponDefinition_Rifle : WeaponDefinitionBase
     {
-        [Header("单发模块")] 
+        [Header("步枪模块")] 
     
         public BulletBase[] bullets;
 
@@ -15,3 +17,5 @@ namespace WeaponSystem
         public float backTime;
     }
 }
+
+

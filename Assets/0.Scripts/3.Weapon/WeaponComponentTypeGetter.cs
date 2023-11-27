@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using WeaponSystem;
 
 public class WeaponComponentTypeGetter : MonoSingleton<WeaponComponentTypeGetter>
 {
@@ -11,6 +12,7 @@ public class WeaponComponentTypeGetter : MonoSingleton<WeaponComponentTypeGetter
         weaponTypeDic = new()
         {
             {11001,typeof(WeaponInGame_OneShoot)},
+            {12001,typeof(WeaponInGame_Rifle)},
         };
     }
 

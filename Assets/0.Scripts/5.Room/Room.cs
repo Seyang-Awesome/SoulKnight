@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Object = System.Object;
 
 public class Room : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Room : MonoBehaviour
     public int RoomHeight { get; private set; }
     public int RoomLength => RoomWidth;
     public int RoomHalfLength => (RoomLength - 1) / 2;
+    
     public Vector2Int CenterPos { get; private set; }
     
     private Tilemap background;
