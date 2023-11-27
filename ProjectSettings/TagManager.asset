@@ -49,9 +49,6 @@ TagManager:
   - name: Wall
     uniqueID: 221841981
     locked: 0
-  - name: Shadow
-    uniqueID: 1132337989
-    locked: 0
   - name: DeadEnemy
     uniqueID: 976832053
     locked: 0
@@ -66,6 +63,12 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3939136149
+    locked: 0
+  - name: ForeForeground
+    uniqueID: 140556985
+    locked: 0
+  - name: Shadow
+    uniqueID: 1132337989
     locked: 0
   - name: Effect
     uniqueID: 3631538147

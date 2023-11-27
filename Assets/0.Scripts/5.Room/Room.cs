@@ -27,29 +27,19 @@ public class Room : MonoBehaviour
     private Tilemap shadow;
     private Tilemap door;
     
-
-    public Room(RoomType roomType)
+    public Room Init(Vector2Int centerPos,RoomType roomType)
     {
+        this.CenterPos = centerPos;
         this.RoomType = roomType;
         IsAwake = false;
         IsBattling = false;
         IsDied = false;
-    }
-
-    private void Start()
-    {
-        Init(RoomType.Start);
-    }
-
-    public void Init(RoomType roomType)
-    {
-        this.RoomType = roomType;
         
-        this.background = GetTilemap(TilemapLayer.Background);
-        this.wall = GetTilemap(TilemapLayer.Wall);
-        this.foreground = GetTilemap(TilemapLayer.Foreground);
-        this.shadow = GetTilemap(TilemapLayer.Shadow);
-        this.door = GetTilemap(TilemapLayer.Door);
+        this.background = transform.GetTilemap(TilemapLayer.Background);
+        this.wall = transform.GetTilemap(TilemapLayer.Wall);
+        this.foreground = transform.GetTilemap(TilemapLayer.Foreground);
+        this.shadow = transform.GetTilemap(TilemapLayer.Shadow);
+        this.door = transform.GetTilemap(TilemapLayer.Door);
         
         background.CompressBounds();
 
@@ -60,6 +50,8 @@ public class Room : MonoBehaviour
             Debug.LogWarning($"房间的长宽不一致，长度为{RoomWidth}，宽度为{RoomHeight}");
         else
             Debug.Log($"房间的长度为:{RoomLength}");
+
+        return this;
     }
     
     private void AwakeRoom()
@@ -67,14 +59,13 @@ public class Room : MonoBehaviour
         Debug.Log("AwakeRoom");
     }
 
-    private Tilemap GetTilemap(TilemapLayer layer)
-    {
-        return transform.GetChild((int)layer).GetComponent<Tilemap>();
-    }
-    
+    // private Tilemap GetTilemap(TilemapLayer layer)
+    // {
+    //     return transform.GetChild((int)layer).GetComponent<Tilemap>();
+    // }
+    //
     public void OnExitDoor(Collider2D other)
     {
-        Debug.LogWarning("la");
         if (other.gameObject.layer != Consts.PlayerTriggerLayer || IsDied) return;
         if (Mathf.Abs(CenterPos.x - other.bounds.center.x) < (float)RoomLength / 2 &&
             Mathf.Abs(CenterPos.y - other.bounds.center.y) < (float)RoomLength / 2)
@@ -99,18 +90,20 @@ public class Room : MonoBehaviour
             door.SetTile(relevantPos,doorTiles[0]);
             wall.SetTile(relevantPos,null);
             foreground.SetTile(relevantPos,null);
+            if(direction == Vector2Int.up || direction == Vector2Int.down)
+                shadow.SetTile(relevantPos,null);
         }
     }
 
     [ContextMenu("LeftDoor")]
     private void SetLeftDoor()
     {
-        SetDoor(Direction.Left);
+        SetDoor(Direction.Right);
     }
     
     [ContextMenu("UpDoor")]
     private void SetUpDoor()
     {
-        SetDoor(Direction.Up);
+        SetDoor(Direction.Down);
     }
 }

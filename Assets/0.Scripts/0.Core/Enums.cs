@@ -11,9 +11,10 @@ public enum RoomType
     Start,
     End,
     Common,
+    Boss,
+
     Store,
     Chest,
-    Boss,
 }
 
 public enum RoomSize

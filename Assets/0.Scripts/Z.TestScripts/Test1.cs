@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Test1 : MonoBehaviour
 {
-    public Room room;
-
-    private void Start()
-    {
-        Room newRoom = Instantiate(room);
-        newRoom.Init(RoomType.Common);
-        newRoom.gameObject.transform.position = new Vector3();
-    }
+    // public Room room;
+    //
+    // private void Start()
+    // {
+    //     Room newRoom = Instantiate(room);
+    //     newRoom.Init(RoomType.Common);
+    //     newRoom.gameObject.transform.position = new Vector3();
+    // }
 }
 

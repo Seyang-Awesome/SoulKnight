@@ -41,6 +41,9 @@ public class Consts
     
     public const int RoomDistance = 25;
     public const int DoorWidth = 5;
+    public static int DoorHalfWidth => DoorWidth / 2;
+    public const int RoadWidth = 7;
+    public static int RoadHalfWidth = RoadWidth / 2;
 
     public static int EnemyTargetLayerMask => 1 << PlayerTriggerLayer;
     public static int MapLayerMask => 1 << WallLayer | 1 << DoorLayer;

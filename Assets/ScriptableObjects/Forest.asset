@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361751a740c4482bb7a2e7c851d097ae, type: 3}
+  m_Name: Forest
+  m_EditorClassIdentifier: 
+  backgroundTiles:
+  - {fileID: 11400000, guid: a7db6df569d9b4d4c89e10c0f73333fd, type: 2}
+  - {fileID: 11400000, guid: 56b8a01f4aca4d3489aec7b68b1073e6, type: 2}
+  - {fileID: 11400000, guid: 6b4903d3388cf3645a20b5989121e2de, type: 2}
+  - {fileID: 11400000, guid: d3eb76ad3348e3f4b8144b79713107d1, type: 2}
+  - {fileID: 11400000, guid: 15bd7543f4a878e4b8f728bcbf78aba6, type: 2}
+  - {fileID: 11400000, guid: 3ec5ae43b1ac9414589107df223916d8, type: 2}
+  roadMatches:
+  - wallTile: {fileID: 11400000, guid: af95ef97ad1fa1548a79760c61ac1f33, type: 2}
+    foregroundTile: {fileID: 11400000, guid: 96fe06d1570fb6641b3a76d061458cc3, type: 2}
+  - wallTile: {fileID: 11400000, guid: 3960a544d685b5a4b95a34034089f5a5, type: 2}
+    foregroundTile: {fileID: 11400000, guid: 84b7d15fe463f6b458b3c4d88d725911, type: 2}
+  - wallTile: {fileID: 11400000, guid: 3960a544d685b5a4b95a34034089f5a5, type: 2}
+    foregroundTile: {fileID: 11400000, guid: 84b7d15fe463f6b458b3c4d88d725911, type: 2}
+  shadow: {fileID: 11400000, guid: 1ef8820e2b04a8e47b9f34f3d5cfd854, type: 2}
