@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerTeam
   - EnemyTeam
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - 
   - Map
   - Door
-  - 
+  - Box
   - 
   - 
   - PlayerCollider
@@ -52,11 +53,17 @@ TagManager:
   - name: DeadEnemy
     uniqueID: 976832053
     locked: 0
+  - name: UnLoadWeapon
+    uniqueID: 377017335
+    locked: 0
   - name: Enemy
     uniqueID: 2955630931
     locked: 0
   - name: Player
     uniqueID: 1858707555
+    locked: 0
+  - name: LoadWeapon
+    uniqueID: 1816635379
     locked: 0
   - name: Bullet
     uniqueID: 1004190537
@@ -64,12 +71,15 @@ TagManager:
   - name: Foreground
     uniqueID: 3939136149
     locked: 0
-  - name: ForeForeground
-    uniqueID: 140556985
-    locked: 0
   - name: Shadow
     uniqueID: 1132337989
     locked: 0
+  - name: ForeForeground
+    uniqueID: 140556985
+    locked: 0
   - name: Effect
     uniqueID: 3631538147
+    locked: 0
+  - name: FakeUI
+    uniqueID: 289868429
     locked: 0

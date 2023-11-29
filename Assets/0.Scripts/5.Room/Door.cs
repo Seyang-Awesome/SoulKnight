@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         //TODO:这里不知道为什么碰撞的消息不会向上层传递？？？
-        GetComponentInParent<Room>().OnExitDoor(other);
+        if (other.gameObject.layer == Consts.PlayerTriggerLayer)
+            GetComponentInParent<Room>().OnExitDoor(other);
     }
 }

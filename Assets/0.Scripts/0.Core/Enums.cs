@@ -31,6 +31,7 @@ public enum TilemapLayer
     Foreground,
     Shadow,
     Door,
+    DoorHead,
 }
 
 public enum Direction

@@ -21,8 +21,6 @@ namespace Seyang.BehaviourTree
         //必须覆写这个类，才能在UIBuilder里添加这个自定义VisualElement
         public new class UxmlFactory : UxmlFactory<BehaviourTreeView, UxmlTraits> { }
         
-
-
         public BehaviourTreeView() 
         {
             //插入网格背景，背景的参数在uss文件中
@@ -49,7 +47,7 @@ namespace Seyang.BehaviourTree
                     context.screenMousePosition - BehaviourTreeEditor.windowRoot.position.position);
                 var graphMousePos = contentContainer.WorldToLocal(windowMousePos);
 
-                CreateNode((Type)searchTreeEntry.userData, graphMousePos);
+                CreateNodeAndNodeView((Type)searchTreeEntry.userData, graphMousePos);
                 return true;
             };
 
@@ -92,7 +90,7 @@ namespace Seyang.BehaviourTree
             if (bt == null) return;
 
             if (bt.rootNode == null)
-                bt.rootNode = CreateNode(typeof(RootNode), Vector2.zero);
+                bt.rootNode = CreateNode(typeof(RootNode));
 
             bt.nodes.ForEach(n => CreateNodeView(n,n.posInView));
 
@@ -113,8 +111,7 @@ namespace Seyang.BehaviourTree
         {
             return GetNodeByGuid(node.guid) as NodeView;
         }
-
-
+        
         private GraphViewChange OnGraphViewChanged(GraphViewChange info)
         {
             if (info.elementsToRemove != null)
@@ -159,7 +156,20 @@ namespace Seyang.BehaviourTree
             return info;
         }
 
-        public NodeBase CreateNode(Type type,Vector2 pos)
+        /// <summary>
+        /// 创建一个节点的实例和节点的视图
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="pos"></param>
+        public void CreateNodeAndNodeView(Type type,Vector2 pos)
+        {
+            CreateNodeView(CreateNode(type,pos));
+        }
+
+        /// <summary>
+        /// 创建一个节点的实例，并以ScriptableObject的形式保存
+        /// </summary>
+        public NodeBase CreateNode(Type type,Vector2 pos = new Vector2())
         {
             if (bt == null)
             {
@@ -167,7 +177,6 @@ namespace Seyang.BehaviourTree
                 return null;
             }
             NodeBase node = bt.CreateNode(type);
-            CreateNodeView(node,pos);
             
             AssetDatabase.AddObjectToAsset(node, bt);
             EditorUtility.SetDirty(node);
@@ -187,11 +196,6 @@ namespace Seyang.BehaviourTree
             nodeView.onNodeViewDeselected = onNodeViewDeselected;
             nodeView.SetPosition(new Rect(pos,Vector2.one));
             AddElement(nodeView);
-        }
-
-        public void SetRootNode(NodeBase node)
-        {
-            bt.rootNode = node;
         }
     }
 

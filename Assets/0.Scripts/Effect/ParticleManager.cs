@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ParticleManager : MonoBehaviour
 {
-    public float particleTime;
-    ParticleSystem particle;
+    [SerializeField]
+    private float particleTime;
+    private ParticleSystem particle;
     private void Awake()
     {
         particle = GetComponent<ParticleSystem>();

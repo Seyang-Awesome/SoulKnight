@@ -23,7 +23,7 @@ namespace WeaponSystem
         private WeaponInGameBase currentWeapon;
         public int currentWeaponNum => weaponInGames.Count;
         public int currentWeaponIndex => weaponInGames.IndexOf(currentWeapon);
-        public Vector2 aimAtDirection => weaponRoot.localScale.x > 0 ? weaponRoot.right : -weaponRoot.right;
+        public Vector2 aimAtDirection => weaponRoot.right * scaleIndex;
         public float scaleIndex => weaponRoot.localScale.x > 0 ? 1f : -1f;
 
         public int nextWeaponIndex

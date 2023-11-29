@@ -29,13 +29,14 @@ public class EnemyMoveToPlayerRuntimeNode : EnemyRuntimeActionNodeBase
     {
         base.OnStart();
         Controller.PlayAnimation(AnimationType.Move);
+        Controller.SetFaceDirection();
+        Controller.SetVelocity(direction * Info.moveSpeed);
         
         direction = (Info.TargetPos - Info.CenterPos).normalized;
 
         counter = ContinueMoveTime;
         isTouched = false;
         
-        Controller.SetVelocity(direction * Info.moveSpeed);
     }
 
     public override void OnStop()

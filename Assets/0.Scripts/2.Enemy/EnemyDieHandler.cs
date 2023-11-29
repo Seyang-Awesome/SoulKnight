@@ -20,7 +20,7 @@ public class EnemyDieHandler : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         
-        sr.sprite = info.EnemeyDieSprite;
+        sr.sprite = info.EnemyDieSprite;
         rb.velocity = info.Direction * Consts.EnemyDieBasicVelocity;
         
         direction = info.Direction.normalized;

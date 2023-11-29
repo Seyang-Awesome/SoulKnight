@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8447532898059908539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd431dc211c74f16aa180c8932cffe27, type: 3}
+  m_Name: RandomContinueNode
+  m_EditorClassIdentifier: 
+  guid: d8635a04-b9f7-477b-be9e-2f21209ec7db
+  posInView: {x: 75, y: -119.000015}
+  child: {fileID: -6369061225692540300}
+  durationMin: 1
+  durationMax: 2
+--- !u!114 &-7784149166702727851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a9908344b44f3cb24fb9a664afbebe, type: 3}
+  m_Name: EnemyAttackNode
+  m_EditorClassIdentifier: 
+  guid: 8d79c2e3-5211-4a31-908c-51d156645f9f
+  posInView: {x: 551, y: 318}
+--- !u!114 &-6970091607999912717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3794036c9ca047178ec22123dc9c7a48, type: 3}
+  m_Name: DetectPlayerNode
+  m_EditorClassIdentifier: 
+  guid: 901ea267-c6c1-43cb-852e-ecf7e5560136
+  posInView: {x: 74.999985, y: 228.00002}
+  child: {fileID: 516102226904288197}
+--- !u!114 &-6369061225692540300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ee5217233342c69185f8ab84293e5d, type: 3}
+  m_Name: EnemyIdleNode
+  m_EditorClassIdentifier: 
+  guid: a77e4ea3-7d80-4ea3-94ef-8fd028834501
+  posInView: {x: 328.85742, y: -118.06348}
+--- !u!114 &-6069370443079606834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e05d0e0060c496fb5a50dc6627c6a98, type: 3}
+  m_Name: EnemyMoveToPlayerNode
+  m_EditorClassIdentifier: 
+  guid: f6e6543c-d444-46bd-a22f-d309204f524c
+  posInView: {x: 789, y: 227.99998}
+--- !u!114 &-5627068792976279102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ab5bc03d0143caa768387b66dcf3bf, type: 3}
+  m_Name: InterruptableNode
+  m_EditorClassIdentifier: 
+  guid: c102843f-ca56-444d-9b31-9c4c2c609259
+  posInView: {x: 551, y: 227.99998}
+  child: {fileID: -6069370443079606834}
+  duration: 3
+--- !u!114 &-4697310397015002135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2caed3f4f408e93d7632d77279153, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  guid: 72300d93-30bd-4f5a-8d51-099da0fd287d
+  posInView: {x: -101.14258, y: -119.06351}
+  children:
+  - {fileID: -8447532898059908539}
+  - {fileID: 9086103523305996607}
+  - {fileID: -4400711606913335001}
+  - {fileID: -6970091607999912717}
+--- !u!114 &-4400711606913335001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd431dc211c74f16aa180c8932cffe27, type: 3}
+  m_Name: RandomContinueNode
+  m_EditorClassIdentifier: 
+  guid: c6f4a6f5-e01c-47a0-b2b1-04ed4ebd9516
+  posInView: {x: 75.00004, y: 107.000015}
+  child: {fileID: -3234889983101843268}
+  durationMin: 1
+  durationMax: 2
+--- !u!114 &-3234889983101843268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f052faa2d6f346bcb97c799e97f1deea, type: 3}
+  m_Name: EnemyMoveRandomNode
+  m_EditorClassIdentifier: 
+  guid: 9d724080-d2c2-47eb-9a42-015ecbe07b1f
+  posInView: {x: 328.85742, y: 106.93652}
+--- !u!114 &-3179094992114059746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8768ca6e684607bc6272089c25d517, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: ad0aed24-b8da-4f45-8d87-110ca39a7c2b
+  posInView: {x: -269.14255, y: -119.06351}
+  child: {fileID: -4697310397015002135}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fb344f9e6757c47877ddabdc2580f0, type: 3}
+  m_Name: Enemy_21001
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -3179094992114059746}
+  nodes:
+  - {fileID: -3179094992114059746}
+  - {fileID: -6369061225692540300}
+  - {fileID: -4697310397015002135}
+  - {fileID: 5259743879981660872}
+  - {fileID: -3234889983101843268}
+  - {fileID: 516102226904288197}
+  - {fileID: -7784149166702727851}
+  - {fileID: -5627068792976279102}
+  - {fileID: -6069370443079606834}
+  - {fileID: -8447532898059908539}
+  - {fileID: 9086103523305996607}
+  - {fileID: -4400711606913335001}
+  - {fileID: -6970091607999912717}
+--- !u!114 &516102226904288197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2caed3f4f408e93d7632d77279153, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  guid: fc8141a2-1217-4873-861b-a0646a87f428
+  posInView: {x: 328.99994, y: 227.99998}
+  children:
+  - {fileID: -5627068792976279102}
+  - {fileID: -7784149166702727851}
+--- !u!114 &5259743879981660872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f052faa2d6f346bcb97c799e97f1deea, type: 3}
+  m_Name: EnemyMoveRandomNode
+  m_EditorClassIdentifier: 
+  guid: 9ef54ca4-b1b0-478f-9478-6cbf71ef2f34
+  posInView: {x: 328.85742, y: -1.0635071}
+--- !u!114 &9086103523305996607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd431dc211c74f16aa180c8932cffe27, type: 3}
+  m_Name: RandomContinueNode
+  m_EditorClassIdentifier: 
+  guid: 6152edac-ab21-4684-affd-cba0f0ee6aee
+  posInView: {x: 75, y: -1.0000038}
+  child: {fileID: 5259743879981660872}
+  durationMin: 1
+  durationMax: 2

@@ -25,14 +25,14 @@ public class EnemyController_21001 : EnemyController
         }
     }
     
-#if UNITY_EDITOR
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(info.CenterPos, attackRadius);
-    }
-
-#endif
+// #if UNITY_EDITOR
+//
+//     private void OnDrawGizmos()
+//     {
+//         Gizmos.color = Color.red;
+//         Gizmos.DrawWireSphere(info.CenterPos, attackRadius);
+//     }
+//
+// #endif
 }
 

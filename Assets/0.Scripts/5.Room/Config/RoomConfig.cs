@@ -11,6 +11,6 @@ public class RoomConfig : ScriptableObject
     public List<Room> chestRooms;
     public List<Room> storeRooms;
     public List<Room> bossRooms;
-    public RoadConfig roadConfig;
+    // public RoadConfig roadConfig;
 }
 

@@ -16,12 +16,14 @@ public class Consts
     public const int EnemySpriteIndex = 0;
     public const int EnemyColliderIndex = 1;
     public const int EnemyTriggerIndex = 2;
+    public const int EnemyWeaponIndex = 3;
     
     public const float EnemyDieBasicVelocity = 50;
     public const float EnemyDieFlyTime = 1;
 
     public const string PlayerTeamTag = "PlayerTeam";
     public const string EnemyTeamTag = "EnemyTeam";
+    public const string BoxTag = "Box";
 
     public const int PlayerLayer = 6;
     public const int EnemyLayer = 7;
@@ -40,11 +42,15 @@ public class Consts
     public const int ForegroundIndex = 2;
     public const int ShadowIndex = 3;
     public const int DoorIndex = 4;
+    public const int DoorHeadIndex = 5;
 
     public const float WallDetectLength = 1f;
     
     public const int RoomDistance = 25;
     public const int DoorWidth = 5;
+    public static Vector2 EnemySpawnBox => new Vector2(0.95f,0.95f);
+    public const float EnemySpawnDelayTime = 1f;
+    
     public static int DoorHalfWidth => DoorWidth / 2;
     public const int RoadWidth = 7;
     public static int RoadHalfWidth = RoadWidth / 2;

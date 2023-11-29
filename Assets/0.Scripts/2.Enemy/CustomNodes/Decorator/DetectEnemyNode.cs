@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Seyang.BehaviourTree;
 
-public class DetectEnemyNode : DecoratorNode
+public class DetectPlayerNode : DecoratorNode
 {
-    public override Type relevantType => typeof(DetectEnemyRuntimeNode);
+    public override Type relevantType => typeof(DetectPlayerRuntimeNode);
     public override RuntimeNodeBase InstantiateRuntimeNode()
     {
-        return new DetectEnemyRuntimeNode();
+        return new DetectPlayerRuntimeNode();
     }
 }
 
-public class DetectEnemyRuntimeNode : EnemyRuntimeDecoratorNodeBase
+public class DetectPlayerRuntimeNode : EnemyRuntimeDecoratorNodeBase
 {
     private bool isDetectPlayer;
     public override void OnStart()

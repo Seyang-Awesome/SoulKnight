@@ -14,6 +14,12 @@ public class EnemyAttackNode : ActionNode
 
 public class EnemyAttackRuntimeNode : EnemyRuntimeActionNodeBase
 {
+    public override void OnStart()
+    {
+        base.OnStart();
+        Controller.PlayAnimation(AnimationType.Idle);
+    }
+
     public override NodeState OnUpdate()
     {
         Controller.Attack();

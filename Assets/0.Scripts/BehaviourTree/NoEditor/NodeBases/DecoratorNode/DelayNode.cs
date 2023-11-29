@@ -39,7 +39,10 @@ namespace Seyang.BehaviourTree
             if (currentTime <= duration)
                 return NodeState.Running;
             else
+            {
+                if (child == null) return NodeState.Success;
                 return child.Update();
+            }
         }
     }
 }

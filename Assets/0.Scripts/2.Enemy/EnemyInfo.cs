@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+public partial class EventManager : MonoSingleton<EventManager>
+{
+    public InvokableAction<EnemyDieInfo> OnEnemyDie = new();
+}
+
 public class EnemyInfo : MonoBehaviour
 {
+    [SerializeField]
     private Collider2D self;
+
     public Collider2D target;
     public Vector2 CenterPos => self.bounds.center;
     public Vector2 TargetPos => target.bounds.center;
+    public Vector2 TargetDirection => TargetPos - CenterPos;
     
     public float moveSpeed;
     public float dragFactor;
@@ -16,7 +24,7 @@ public class EnemyInfo : MonoBehaviour
 
     public int basicHealth;
     public Sprite enemyDieSprite;
-    public InvokableAction<EnemyDieInfo> onEnemyDie = new();
+    public InvokableAction<EnemyDieInfo> onThisEnemyDie = new();
 
     [SerializeField]
     private int _currentHealth;
@@ -51,9 +59,9 @@ public class EnemyInfo : MonoBehaviour
         currentHealth -= hurtInfo.Damage;
         if (currentHealth <= 0)
         {
-            EnemyDieInfo info = new EnemyDieInfo(CenterPos, hurtInfo.DamageDirection, enemyDieSprite);
-            EnemyDieHandlerManager.Instance.OnEnemyDie(this.gameObject,info);
-            onEnemyDie.Invoke(info);
+            EnemyDieInfo info = new EnemyDieInfo(CenterPos, hurtInfo.DamageDirection, enemyDieSprite,gameObject);
+            onThisEnemyDie.Invoke(info);
+            EventManager.Instance.OnEnemyDie.Invoke(info);
         }
     }
     

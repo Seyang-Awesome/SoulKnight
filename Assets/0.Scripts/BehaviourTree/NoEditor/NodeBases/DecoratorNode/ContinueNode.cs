@@ -40,7 +40,7 @@ namespace Seyang.BehaviourTree
             counter += Time.deltaTime;
             if (counter <= duration)
             {
-                child.OnUpdate();
+                child?.OnUpdate();
                 return NodeState.Running;
             }
             else

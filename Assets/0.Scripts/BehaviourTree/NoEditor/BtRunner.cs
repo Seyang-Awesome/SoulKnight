@@ -22,12 +22,12 @@ public class BtRunner : MonoBehaviour
         nodeData = new NodeRuntimeData(this, gameObject);
         rootRuntimeNode = CloneBtTreeToRuntime(bt.rootNode) as RootRuntimeNode;
 
-        GetComponent<EnemyInfo>().onEnemyDie += OnEnemyDie;
+        GetComponent<EnemyInfo>().onThisEnemyDie += OnEnemyDie;
     }
 
     private void OnDestroy()
     {
-        GetComponent<EnemyInfo>().onEnemyDie -= OnEnemyDie;
+        GetComponent<EnemyInfo>().onThisEnemyDie -= OnEnemyDie;
     }
 
     private void OnEnemyDie(EnemyDieInfo _)
@@ -37,7 +37,7 @@ public class BtRunner : MonoBehaviour
         OnCollisionExit = null;
         OnTriggerEnter = null;
         OnTriggerExit = null;
-        GetComponent<EnemyInfo>().onEnemyDie -= OnEnemyDie;
+        GetComponent<EnemyInfo>().onThisEnemyDie -= OnEnemyDie;
     }
 
     private void FixedUpdate()

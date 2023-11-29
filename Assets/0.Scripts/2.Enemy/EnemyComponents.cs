@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyComponents : MonoBehaviour
 {
-    public EnemyInfo info;
-    public EnemyController controller;
+    [HideInInspector] public EnemyInfo info;
+    [HideInInspector] public EnemyController controller;
 
     private void Awake()
     {

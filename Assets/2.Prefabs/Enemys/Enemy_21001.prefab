@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 3821516910275682715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.66, y: -1.42, z: 0}
+  m_LocalPosition: {x: -0.5, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -148,7 +148,6 @@ MonoBehaviour:
   dragFactor: 0
   detectPlayerRadius: 8
   basicHealth: 30
-  attackPower: 0
   enemyDieSprite: {fileID: 21300000, guid: df3474790c34f6b4a9d00bef9b6a683d, type: 3}
   _currentHealth: 0
   backable: 0
@@ -164,13 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ccb0b63d54aa68b780275b2a8cdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: {fileID: 9153104970580588069}
-  animator: {fileID: 6593307013775435107}
-  collider: {fileID: 2238792073686562884}
-  trigger: {fileID: 7523706144531781215}
-  rb: {fileID: 5335560038698708694}
-  btRunner: {fileID: 2155294587952404676}
-  enemyDieHandlerPrefab: {fileID: 3941487659439892865, guid: 09780ca51a90be440bef336add561f49, type: 3}
   attackRadius: 0.8
   attackPower: 5
 --- !u!114 &2155294587952404676
@@ -285,7 +277,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1339336365
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 73c3556d15049104ebb29ad896e4449f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -367,7 +359,6 @@ MonoBehaviour:
   sr: {fileID: 5265830364147916499}
   trigger: {fileID: 7523706144531781215}
   rb: {fileID: 5335560038698708694}
-  enemyInfo: {fileID: 9153104970580588069}
 --- !u!61 &7523706144531781215
 BoxCollider2D:
   m_ObjectHideFlags: 0

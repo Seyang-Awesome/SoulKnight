@@ -20,6 +20,7 @@ public class EnemyMoveRandomRuntimeNode : EnemyRuntimeActionNodeBase
     {
         base.OnStart();
         Controller.PlayAnimation(AnimationType.Move);
+        Controller.SetFaceDirection();
 
         direction = SeyangExtension.GetRandomDirection();
         direction = AdjustMoveDirection(direction);

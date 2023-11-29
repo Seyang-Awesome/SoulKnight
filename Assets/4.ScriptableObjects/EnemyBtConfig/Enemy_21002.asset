@@ -1,0 +1,250 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8890501488569508626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f052faa2d6f346bcb97c799e97f1deea, type: 3}
+  m_Name: EnemyMoveRandomNode
+  m_EditorClassIdentifier: 
+  guid: 9d0c6456-4ab2-477e-bc2d-a4296eecb1e8
+  posInView: {x: -62.556, y: -252.09016}
+--- !u!114 &-8610003298227207675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f052faa2d6f346bcb97c799e97f1deea, type: 3}
+  m_Name: EnemyMoveRandomNode
+  m_EditorClassIdentifier: 
+  guid: 7b3f6279-e2bd-4e4e-a299-e1ee24111079
+  posInView: {x: -62.556, y: -148.09015}
+--- !u!114 &-8148424578044626519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd431dc211c74f16aa180c8932cffe27, type: 3}
+  m_Name: RandomContinueNode
+  m_EditorClassIdentifier: 
+  guid: 36e0d9a1-0985-4a55-9a23-1fb152fed419
+  posInView: {x: -286.35, y: -356}
+  child: {fileID: 8335652660420698905}
+  durationMin: 1
+  durationMax: 2
+--- !u!114 &-7231463580200391529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8768ca6e684607bc6272089c25d517, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: 885476cb-15cb-43ad-9cde-25e235422316
+  posInView: {x: -621.5559, y: -356.09015}
+  child: {fileID: 7640173165243912736}
+--- !u!114 &-3066046627773000510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a9908344b44f3cb24fb9a664afbebe, type: 3}
+  m_Name: EnemyAttackNode
+  m_EditorClassIdentifier: 
+  guid: a149e5d6-1b6a-47d4-b016-349583c74e60
+  posInView: {x: 170.00002, y: 65.99999}
+--- !u!114 &-2058627055696367556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3794036c9ca047178ec22123dc9c7a48, type: 3}
+  m_Name: DetectPlayerNode
+  m_EditorClassIdentifier: 
+  guid: 914e3419-8f00-4f9c-a5b8-8ae1adac5aa1
+  posInView: {x: -286, y: -44}
+  child: {fileID: 7839210684820790233}
+--- !u!114 &-1795361709906521857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec08b2155644479acd0b63242213c85, type: 3}
+  m_Name: DelayNode
+  m_EditorClassIdentifier: 
+  guid: 4870f923-404c-4423-86f0-ff845a986beb
+  posInView: {x: 170.00003, y: 176.3225}
+  child: {fileID: 0}
+  duration: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fb344f9e6757c47877ddabdc2580f0, type: 3}
+  m_Name: Enemy_21002
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -7231463580200391529}
+  nodes:
+  - {fileID: -7231463580200391529}
+  - {fileID: 7640173165243912736}
+  - {fileID: 8335652660420698905}
+  - {fileID: -8890501488569508626}
+  - {fileID: -8610003298227207675}
+  - {fileID: 7839210684820790233}
+  - {fileID: 6924467167261917810}
+  - {fileID: 3578668879201780181}
+  - {fileID: -3066046627773000510}
+  - {fileID: -1795361709906521857}
+  - {fileID: -8148424578044626519}
+  - {fileID: 8712757648688962168}
+  - {fileID: 3304548826323526788}
+  - {fileID: -2058627055696367556}
+--- !u!114 &3304548826323526788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd431dc211c74f16aa180c8932cffe27, type: 3}
+  m_Name: RandomContinueNode
+  m_EditorClassIdentifier: 
+  guid: ab09973f-31e1-408c-82e7-97e2dffb096b
+  posInView: {x: -285.9999, y: -148}
+  child: {fileID: -8610003298227207675}
+  durationMin: 1
+  durationMax: 2
+--- !u!114 &3578668879201780181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802fca72877040008f73085786a3455d, type: 3}
+  m_Name: EnemyAimAtPlayerNode
+  m_EditorClassIdentifier: 
+  guid: 3bc231dc-81b0-4563-a34e-3f107ea88631
+  posInView: {x: 370, y: -44}
+--- !u!114 &6924467167261917810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923de2113bd6439fa65c6c24b559054a, type: 3}
+  m_Name: ContinueNode
+  m_EditorClassIdentifier: 
+  guid: c7de107a-fa47-4587-8d9f-ea860468516f
+  posInView: {x: 170.20006, y: -43.999985}
+  child: {fileID: 3578668879201780181}
+  duration: 0.5
+--- !u!114 &7640173165243912736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2caed3f4f408e93d7632d77279153, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  guid: ea3e67b0-6bff-459c-bd95-7438e5316b99
+  posInView: {x: -465.64493, y: -356}
+  children:
+  - {fileID: -8148424578044626519}
+  - {fileID: 8712757648688962168}
+  - {fileID: 3304548826323526788}
+  - {fileID: -2058627055696367556}
+--- !u!114 &7839210684820790233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2caed3f4f408e93d7632d77279153, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  guid: 7dc1e188-4bed-442e-8e31-99b58fa3ae34
+  posInView: {x: -63, y: -44}
+  children:
+  - {fileID: 6924467167261917810}
+  - {fileID: -3066046627773000510}
+  - {fileID: -1795361709906521857}
+--- !u!114 &8335652660420698905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ee5217233342c69185f8ab84293e5d, type: 3}
+  m_Name: EnemyIdleNode
+  m_EditorClassIdentifier: 
+  guid: e51ad127-447b-40b0-aed8-20eff93e3aab
+  posInView: {x: -62.556, y: -356.09015}
+--- !u!114 &8712757648688962168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd431dc211c74f16aa180c8932cffe27, type: 3}
+  m_Name: RandomContinueNode
+  m_EditorClassIdentifier: 
+  guid: 70058006-b8f0-4443-9018-a6e2ff396ede
+  posInView: {x: -285.99994, y: -252.00006}
+  child: {fileID: -8890501488569508626}
+  durationMin: 1
+  durationMax: 2

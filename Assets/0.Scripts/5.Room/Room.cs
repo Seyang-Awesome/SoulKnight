@@ -1,18 +1,18 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Object = System.Object;
+using Random = UnityEngine.Random;
+// using UnityEngine.UIElements;
 
 public class Room : MonoBehaviour
 {
     [SerializeField] private Collider2D doorCollider;
-
     [SerializeField] private TileBase[] doorTiles;
     
     public bool IsAwake { get; private set; }
-    public bool IsBattling { get; private set; }
     public bool IsDied { get; private set; }
 
     public RoomType RoomType { get; private set; }
@@ -22,26 +22,59 @@ public class Room : MonoBehaviour
     public int RoomHalfLength => (RoomLength - 1) / 2;
     
     public Vector2Int CenterPos { get; private set; }
+    public Vector2 CenterPosInWorld => CenterPos + new Vector2(0.5f,0.5f);
+    public Vector2 CheckBox => new Vector2((float)RoomLength - 4.5f,(float)RoomLength - 4.5f);
     
     private Tilemap background;
     private Tilemap wall;
     private Tilemap foreground;
     private Tilemap shadow;
     private Tilemap door;
+    private Tilemap doorHead;
+
+    private List<Vector2> enemySpawnPosList = new();
+    private List<Vector3Int> doorTilePos = new();
+    private int enemySpawnWave;
     
+    private void Start()
+    {
+        float xMin = CenterPosInWorld.x - RoomHalfLength + 2f;
+        float xMax = CenterPosInWorld.x + RoomHalfLength - 2f;
+        float yMin = CenterPosInWorld.y - RoomHalfLength + 2f;
+        float yMax = CenterPosInWorld.y + RoomHalfLength - 2f;
+
+        Vector2 detectBox = Consts.EnemySpawnBox;
+        for (float i = xMin; i <= xMax; i++)
+        {
+            for (float j = yMin; j <= yMax; j++)
+            {
+                if(!Physics2D.BoxCast(new Vector2(i, j), detectBox, 0, 
+                       Vector2.zero, 0, Consts.MapLayerMask))
+                    enemySpawnPosList.Add(new Vector2(i,j));
+            }
+        }
+        
+        BoundsInt bounds = door.cellBounds;
+        
+        for (int x = bounds.x; x < bounds.x + bounds.size.x; x++)
+        {
+            for (int y = bounds.y; y < bounds.y + bounds.size.y; y++)
+            {
+                Vector3Int currentPos = new Vector3Int(x, y, 0);
+                if (door.GetTile(currentPos) != null)
+                    doorTilePos.Add(currentPos);
+            }
+        }
+    }
+
     public Room Init(Vector2Int centerPos,RoomType roomType)
     {
-        this.CenterPos = centerPos;
-        this.RoomType = roomType;
-        IsAwake = false;
-        IsBattling = false;
-        IsDied = false;
-        
         this.background = transform.GetTilemap(TilemapLayer.Background);
         this.wall = transform.GetTilemap(TilemapLayer.Wall);
         this.foreground = transform.GetTilemap(TilemapLayer.Foreground);
         this.shadow = transform.GetTilemap(TilemapLayer.Shadow);
         this.door = transform.GetTilemap(TilemapLayer.Door);
+        this.doorHead = transform.GetTilemap(TilemapLayer.DoorHead);
         
         background.CompressBounds();
 
@@ -50,35 +83,17 @@ public class Room : MonoBehaviour
         RoomHeight = cellBounds.yMax - cellBounds.yMin; 
         if (RoomWidth != RoomHeight)
             Debug.LogWarning($"房间的长宽不一致，长度为{RoomWidth}，宽度为{RoomHeight}");
-        else
-            Debug.Log($"房间的长度为:{RoomLength}");
-
+        // else
+        //     Debug.Log($"房间的长度为:{RoomLength}");
+        
+        this.CenterPos = centerPos;
+        this.RoomType = roomType;
+        
+        IsAwake = false;
+        IsDied = false;
+        enemySpawnWave = Random.Range(1, 4);
+        
         return this;
-    }
-    
-    private void AwakeRoom()
-    {
-        Debug.Log("AwakeRoom");
-    }
-
-    // private Tilemap GetTilemap(TilemapLayer layer)
-    // {
-    //     return transform.GetChild((int)layer).GetComponent<Tilemap>();
-    // }
-    //
-    public void OnExitDoor(Collider2D other)
-    {
-        if (other.gameObject.layer != Consts.PlayerTriggerLayer || IsDied) return;
-        if (Mathf.Abs(CenterPos.x - other.bounds.center.x) < (float)RoomLength / 2 &&
-            Mathf.Abs(CenterPos.y - other.bounds.center.y) < (float)RoomLength / 2)
-        {
-            AwakeRoom();
-        }
-    }
-    
-    public void SetDoor(Direction direction)
-    {
-        SetDoor(direction.GetRelevantDirection().ToVector2Int());
     }
 
     public void SetDoor(Vector2Int direction)
@@ -96,16 +111,83 @@ public class Room : MonoBehaviour
                 shadow.SetTile(relevantPos,null);
         }
     }
-
-    [ContextMenu("LeftDoor")]
-    private void SetLeftDoor()
+    
+    public void OnExitDoor(Collider2D other)
     {
-        SetDoor(Direction.Right);
+        if (other.gameObject.layer != Consts.PlayerTriggerLayer || IsDied || IsAwake) return;
+        if (RoomType != RoomType.Common) return;
+        
+        if (Mathf.Abs(CenterPosInWorld.x - other.bounds.center.x) < (float)RoomLength / 2 &&
+            Mathf.Abs(CenterPosInWorld.y - other.bounds.center.y) < (float)RoomLength / 2)
+            AwakeRoom();
+        // Debug.Log(CenterPosInWorld);
+        // Debug.Log(other.bounds.center);
+        // Debug.Log((float)RoomLength / 2);
+        // Debug.Log((Mathf.Abs(CenterPosInWorld.x - other.bounds.center.x) < (float)RoomLength / 2 &&
+        //            Mathf.Abs(CenterPosInWorld.y - other.bounds.center.y) < (float)RoomLength / 2));
     }
     
-    [ContextMenu("UpDoor")]
-    private void SetUpDoor()
+    private void AwakeRoom()
     {
-        SetDoor(Direction.Down);
+        // Debug.Log("AwakeRoom");
+        SpawnEnemy();
+        CloseDoor();
+        IsAwake = true;
+        EventManager.Instance.OnEnemyClear += OnEnemyClear;
     }
+
+    private void RestrainRoom()
+    {
+        // Debug.Log("RestrainRoom");
+        OpenDoor();
+        IsDied = true;
+        EventManager.Instance.OnEnemyClear -= OnEnemyClear;
+    }
+
+    private void OpenDoor()
+    {
+        door.GetComponent<CompositeCollider2D>().isTrigger = true;
+        doorTilePos.ForEach(pos => door.SetTile(pos,doorTiles[0]));
+        doorTilePos.ForEach(pos => doorHead.SetTile(pos,null));
+    }
+
+    private async void CloseDoor()
+    {
+        door.GetComponent<CompositeCollider2D>().isTrigger = false;
+        doorTilePos.ForEach(pos => door.SetTile(pos,doorTiles[1]));
+        doorTilePos.ForEach(pos => doorHead.SetTile(pos,doorTiles[2]));
+    }
+    
+    private void SpawnEnemy()
+    {
+        int enemyNum = Random.Range(4, 8);
+        enemySpawnWave--;
+        EventManager.Instance.OnRequestSpawnEnemy.Invoke(enemySpawnPosList,5);
+    }
+
+    private void OnEnemyClear()
+    {
+        if (enemySpawnWave > 0)
+            SpawnEnemy();
+        else
+            RestrainRoom();
+    }
+
+    [ContextMenu("SetDoor")]
+    private void SetLeftDoor()
+    {
+        SetDoor(Vector2Int.left);
+        SetDoor(Vector2Int.right);
+        SetDoor(Vector2Int.up);
+        SetDoor(Vector2Int.down);
+
+    }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(CenterPosInWorld, CheckBox);
+    }
+#endif
 }

@@ -25,7 +25,7 @@ namespace WeaponSystem
         
             base.Attack(direction);
             Bullet_Single newBullet = PoolManager.Instance.GetGameObject(bullet) as Bullet_Single;
-            newBullet.Init(direction,wd.accuracy, wd);
+            newBullet.Init(new BulletInfo(wd,direction));
             newBullet.transform.position = bulletExitPosTransform.transform.position;
         }
 

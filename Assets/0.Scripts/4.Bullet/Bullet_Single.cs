@@ -8,31 +8,33 @@ public class Bullet_Single : BulletBase
     [SerializeField] private float velocity;
 
     [SerializeField] private GameObject particle;
-
-    [SerializeField] private Rigidbody2D rb;
     
     [SerializeField] private Animator animator;
 
     private float appearCounter;
     private bool isActive;
 
-    private WeaponDefinitionBase wd;
+    private BulletInfo info;
+    private Rigidbody2D rb;
     
-    public void Init(Vector2 direction, int accuracy, WeaponDefinitionBase wd)
+    public override void Init(BulletInfo info)
     {
-        animator.Play("Fly");
-        transform.right = direction;
-        transform.Rotate(new Vector3(0,0,Random.Range((float)-accuracy, (float)accuracy)));
+        base.Init(info);
+        this.info = info;
+        rb = GetComponent<Rigidbody2D>();
+        light.SetActive(true);
+        
+        transform.right = info.Direction;
+        transform.Rotate(new Vector3(0,0,Random.Range((float)-info.Offset, (float)info.Offset)));
         rb.velocity = transform.right.normalized * velocity;
 
         appearCounter = Consts.BulletDisappearTime;
         isActive = true;
-
-        this.wd = wd;
     }
 
     private void OnTouchEntity()
     {
+        light.SetActive(false);
         animator.Play("Die");
         rb.velocity = Vector2.zero;
 
@@ -58,9 +60,10 @@ public class Bullet_Single : BulletBase
     {
         if (!isActive) return;
         
-        if (other.CompareTag(Consts.EnemyTeamTag))
+        if (other.CompareTag(Consts.EnemyTeamTag) || other.CompareTag(Consts.PlayerTeamTag) ||
+            other.CompareTag(Consts.BoxTag))
         {
-            HurtInfo hurtInfo = new(wd.damage,other.bounds.center - transform.position);
+            HurtInfo hurtInfo = new(info.Damage,other.bounds.center - transform.position);
             other.GetComponent<Hurtable>().Hurt(hurtInfo);
         }
         
