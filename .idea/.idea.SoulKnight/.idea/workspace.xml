@@ -5,42 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/KnifeAttackTiming.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/KnifeAttackTiming.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_Knife.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_Knife.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefition_Laser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefition_Laser.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Knife.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Knife.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Knife_ZeroConsume.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Knife_ZeroConsume.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Laser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Laser.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Lazer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Lazer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/BoxCollider2DWire.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/BoxCollider2DWire.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions/Poison.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions/Poison.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/IBuffCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/IBuffCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/ContinuousSchedule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/ContinuousSchedule.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EntityInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EntityInfo.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/ProjectExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/ProjectExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyControllers/EnemyController_21002.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyControllers/EnemyController_21002.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/MonoSingleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/SeyangExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/SeyangExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerHurtHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGameBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_OneShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_OneShoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Rifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Rifle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/BulletBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/BulletBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Single.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Single.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/BoxHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/BoxHurtHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/BulletInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/BulletInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Bullets/Bullet_31001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Bullets/Bullet_31001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Bullets/Bullet_31002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Bullets/Bullet_31002.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Bullets/Bullet_32001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Bullets/Bullet_32001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Bullets/Bullet_32001.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Bullets/Bullet_32001.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Weapons/WeaponContainer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Weapons/WeaponContainer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BattleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/RoomManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/Schedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/Schedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/ScheduleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/ScheduleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/Hurtable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/Hurtable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/RoomBattleInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomBattleInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/RoomBattleInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomBattleInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/RoomBeforeGenerateInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomBeforeGenerateInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/RoomBeforeGenerateInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomBeforeGenerateInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21001.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21002.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +169,7 @@
       <workItem from="1701434967083" duration="1529000" />
       <workItem from="1701508886280" duration="16293000" />
       <workItem from="1701683600870" duration="38000" />
-      <workItem from="1702032966027" duration="315000" />
+      <workItem from="1702032966027" duration="7869000" />
     </task>
     <servers />
   </component>

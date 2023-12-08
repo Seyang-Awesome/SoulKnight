@@ -6,8 +6,13 @@ using UnityEngine;
 public abstract class Hurtable : MonoBehaviour
 {
     [SerializeField] protected SpriteRenderer sr;
-    [SerializeField] protected BoxCollider2D trigger;
     [SerializeField] protected Rigidbody2D rb;
+    public EntityInfo EntityInfo { get; private set; }
+
+    private void Start()
+    {
+        EntityInfo = GetComponentInParent<EntityInfo>();
+    }
 
     public abstract void Hurt(HurtInfo hurtInfo);
 
@@ -25,7 +30,5 @@ public abstract class Hurtable : MonoBehaviour
         await UniTask.Delay(TimeSpan.FromSeconds(Consts.BackTime));
         rb.velocity = last;
     }
-    
-    
 }
 

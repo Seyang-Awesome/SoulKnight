@@ -17,19 +17,31 @@ public class ScheduleManager : MonoSingleton<ScheduleManager>
     private void Update()
     {
         if (schedules.Count == 0) return;
-        if (schedules[0].endTime <= Time.realtimeSinceStartup)
+        if (schedules[0].EndTime <= Time.realtimeSinceStartup)
             InvokeSchedule();
     }
 
-    private void AddSchedule(Schedule schedule)
+    public void AddSchedule(Schedule schedule)
     {
         if (schedule == null) return;
         schedules.Add(schedule);
-        schedules.Sort((schedule1,schedule2) => schedule1.endTime >= schedule2.endTime ? 1 : -1);
+        schedules.Sort((schedule1,schedule2) => schedule1.EndTime >= schedule2.EndTime ? 1 : -1);
         schedule.InvokeStartCallback();
     }
 
-    private void RemoveSchedule(Schedule schedule)
+    public void AddSchedule(ContinuousSchedule continuousSchedule)
+    {
+        if (continuousSchedule == null) return;
+        if(continuousSchedule.IsInvokeOnStart)
+            schedules.Add(new Schedule(0,continuousSchedule.ContinuousAction));
+        int left = continuousSchedule.IsInvokeOnStart ? continuousSchedule.Times - 1 : continuousSchedule.Times;
+        for (int i = 1; i < left + 1; i++)
+        {
+            schedules.Add(new Schedule(i * continuousSchedule.Interval,continuousSchedule.ContinuousAction));
+        }
+    }
+
+    public void RemoveSchedule(Schedule schedule)
     {
         if (!schedules.Contains(schedule)) return;
         schedules.Remove(schedule);
@@ -37,7 +49,7 @@ public class ScheduleManager : MonoSingleton<ScheduleManager>
 
     private void InvokeSchedule()
     {
-        while (schedules.Count != 0 && schedules[0].endTime <= Time.realtimeSinceStartup)
+        while (schedules.Count != 0 && schedules[0].EndTime <= Time.realtimeSinceStartup)
         {
             schedules[0].InvokeEndCallback();
             schedules.RemoveAt(0);

@@ -45,3 +45,12 @@ public enum Direction
     Left = 0x004,
     Right = 0x008
 }
+
+public enum BuffType
+{
+    Poison = 0x001,
+    Fire = 0x002,
+    Ice = 0x004,
+    SpeedUp = 0x008,
+    SlowDown = 0x016,
+}

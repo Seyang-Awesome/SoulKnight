@@ -145,8 +145,8 @@ namespace WeaponSystem
         {
             if (info.target != null)
             {
-                weaponRoot.localScale = info.TargetDirectionCoefficient == 1 ? weaponScale : inverseWeaponScale;
-                weaponRoot.right = info.TargetDirection * -ScaleIndex;
+                weaponRoot.localScale = info.TargetDirectionCoefficient > 0 ? weaponScale : inverseWeaponScale;
+                weaponRoot.right = info.TargetDirection * ScaleIndex;
             }
             else
             {

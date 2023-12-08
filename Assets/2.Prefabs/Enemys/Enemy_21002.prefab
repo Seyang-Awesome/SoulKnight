@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce66ae45b1294663af782018f8531bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  self: {fileID: 5226522143695210542}
+  trigger: {fileID: 5226522143695210542}
   target: {fileID: 0}
   moveSpeed: 5
   dragFactor: 0

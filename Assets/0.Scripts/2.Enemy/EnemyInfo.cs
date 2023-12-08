@@ -8,18 +8,9 @@ public partial class EventManager : MonoSingleton<EventManager>
     public InvokableAction<EnemyDieInfo> OnEnemyDie = new();
 }
 
-public class EnemyInfo : MonoBehaviour
+public class EnemyInfo : EntityInfo
 {
-    [SerializeField]
-    private Collider2D self;
-
-    public Collider2D target;
-    public Vector2 CenterPos => self.bounds.center;
-    public Vector2 TargetPos => target.bounds.center;
-    public Vector2 TargetDirection => TargetPos - CenterPos;
-    
-    public float moveSpeed;
-    public float dragFactor;
+    [Header("敌人模块")]
     public float detectPlayerRadius;
 
     public int basicHealth;
@@ -51,7 +42,7 @@ public class EnemyInfo : MonoBehaviour
         currentHealth = basicHealth;
         backable = true;
 
-        self = transform.GetChild(Consts.EnemyTriggerIndex).GetComponent<Collider2D>();
+        trigger = transform.GetChild(Consts.EnemyTriggerIndex).GetComponent<Collider2D>();
     }
     
     public void Hurt(HurtInfo hurtInfo)

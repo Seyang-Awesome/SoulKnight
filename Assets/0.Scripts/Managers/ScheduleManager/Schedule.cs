@@ -3,46 +3,46 @@ using UnityEngine;
 
 public class Schedule
 {
-    public float duration { get; private set; }
-    public float startTime { get; private set; }
-    public float endTime { get; private set; }
+    public float Duration { get; private set; }
+    public float StartTime { get; private set; }
+    public float EndTime { get; private set; }
     
-    private event Action onStartCallback;
-    private event Action onEndCallback;
+    private event Action OnStart;
+    private event Action OnEnd;
     
     public Schedule(float duration)
     {
-        this.duration = duration;
-        startTime = Time.realtimeSinceStartup;
-        endTime = Time.realtimeSinceStartup + duration;
+        this.Duration = duration;
+        StartTime = Time.realtimeSinceStartup;
+        EndTime = Time.realtimeSinceStartup + duration;
     }
     public Schedule(float duration,Action onEndCallback)
     {
-        this.duration = duration;
-        startTime = Time.realtimeSinceStartup;
-        endTime = Time.realtimeSinceStartup + duration;
+        this.Duration = duration;
+        StartTime = Time.realtimeSinceStartup;
+        EndTime = Time.realtimeSinceStartup + duration;
         
-        this.onStartCallback = null;
-        this.onEndCallback = onEndCallback;
+        this.OnStart = null;
+        this.OnEnd = onEndCallback;
     }
     public Schedule(float duration,Action onStartCallback,Action onEndCallback)
     {
-        this.duration = duration;
-        startTime = Time.realtimeSinceStartup;
-        endTime = Time.realtimeSinceStartup + duration;
+        this.Duration = duration;
+        StartTime = Time.realtimeSinceStartup;
+        EndTime = Time.realtimeSinceStartup + duration;
         
-        this.onStartCallback = onStartCallback;
-        this.onEndCallback = onEndCallback;
+        this.OnStart = onStartCallback;
+        this.OnEnd = onEndCallback;
     }
 
     public void InvokeStartCallback()
     {
-        onStartCallback?.Invoke();
+        OnStart?.Invoke();
     }
 
     public void InvokeEndCallback()
     {
-        onEndCallback?.Invoke();
+        OnEnd?.Invoke();
     }
     
 }

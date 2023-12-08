@@ -29,7 +29,7 @@ public class RoomManager : MonoSingleton<RoomManager>
     private Tilemap shadow;
     private Tilemap door;
 
-
+    protected override bool IsDontDestroyOnLoad => false;
 
     private void Start()
     {

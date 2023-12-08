@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         };
         
         info = GetComponent<PlayerInfo>();
-        animator = info.playerAnimator;
+        animator = info.animator;
         rb = info.rb;
     }
     private void Start()
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     public void SetFaceDirection()
     {
         if (info.target != null)
-            playerSrTransfrom.localScale = info.TargetDirection.x <= 0 ? playerScale : inversePlayerScale;
+            playerSrTransfrom.localScale = info.TargetDirection.x >= 0 ? playerScale : inversePlayerScale;
         else
         {
             if (rb.velocity.x > Consts.TinyNum)

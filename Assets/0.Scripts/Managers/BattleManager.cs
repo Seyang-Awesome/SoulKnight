@@ -12,6 +12,8 @@ public class BattleManager : MonoSingleton<BattleManager>
     [SerializeField] private EnemyDieHandler enemyDieHandlerPrefab;
     
     private RoomBattleInfo currentRoomBattleInfo;
+    
+    protected override bool IsDontDestroyOnLoad => false;
     private void Start()
     {
         EventManager.Instance.OnEnemyDie += OnEnemyDie;

@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce66ae45b1294663af782018f8531bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  self: {fileID: 7523706144531781215}
+  trigger: {fileID: 7523706144531781215}
   target: {fileID: 0}
   moveSpeed: 5
   dragFactor: 0

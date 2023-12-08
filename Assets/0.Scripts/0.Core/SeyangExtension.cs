@@ -18,7 +18,10 @@ public static class SeyangExtension
     //     transform.DOMove(pos, backTime);
     //     await UniTask.Delay(TimeSpan.FromSeconds(backTime));
     // }
-    
+    public static void Log(this object obj)
+    {
+        Debug.Log(obj);
+    }
     public static List<Type> GetDerivedClasses(this Type type)
     {
         List<Type> derivedClasses = new List<Type>();
