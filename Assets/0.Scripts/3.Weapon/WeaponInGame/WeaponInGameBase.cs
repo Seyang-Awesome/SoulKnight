@@ -1,21 +1,24 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace WeaponSystem
 {
     public abstract class WeaponInGameBase : MonoBehaviour
     {
         protected WeaponDefinitionBase weaponDefinitionBase;
-        protected WeaponDefinitionBase wd => weaponDefinitionBase;
-        protected object[] skillData;
-        public bool isCanAttack => !isCooling;
-        public bool isCooling { get; private set; }
-        public bool isInComboTime { get; private set; }
-        public bool isShaking { get; protected set; }
-        public int currentComboIndex{ get; private set; }
-
-        // [SerializeField]
-        // protected Transform weaponRoot;
+        protected WeaponDefinitionBase Wd => weaponDefinitionBase;
+        // protected object[] skillData;
+        protected bool IsCanAttack => !IsCooling;
+        protected bool IsCooling { get; private set; }
+        protected bool IsInComboTime { get; private set; }
+        protected bool IsShaking { get; set; }
+        protected int ComboIndex{ get; private set; }
+        protected Vector2 WeaponDirection => transform.right * scaleIndex;
+        protected int scaleIndex => weaponRoot.localScale.x > 0 ? 1 : -1;
+        
+        [SerializeField]
+        protected Transform weaponRoot;
         [SerializeField]
         protected Transform weaponSpriteTransform;
         [SerializeField]
@@ -27,6 +30,11 @@ namespace WeaponSystem
         protected SpriteRenderer weaponSr;
         [SerializeField]
         protected SpriteRenderer weaponEffectSr;
+        [SerializeField] 
+        protected Animator weaponSpriteAnimator;
+        [SerializeField] 
+        protected Animator weaponEffectAnimator;
+        
 
         private float attackIntervalCounter;
         private float comboCounter;
@@ -41,36 +49,42 @@ namespace WeaponSystem
         {
             this.weaponDefinitionBase = weaponDefinitionBase;
 
-            isCooling = false;
-            isInComboTime = false;
-            isShaking = false;
-            currentComboIndex = 0;
+            IsCooling = false;
+            IsInComboTime = false;
+            IsShaking = false;
+            ComboIndex = 0;
             attackIntervalCounter = 0;
             comboCounter = 0;
 
+            weaponRoot = transform.parent;
             weaponSpriteTransform = transform.GetChild(0);
             bulletExitPosTransform = transform.GetChild(1);
             weaponEffectTransform = transform.GetChild(2);
             weaponSr = weaponSpriteTransform.GetComponent<SpriteRenderer>();
             weaponEffectSr = weaponEffectTransform.GetComponent<SpriteRenderer>();
+            weaponSpriteAnimator = weaponSpriteTransform.GetComponent<Animator>();
+            weaponEffectAnimator = weaponEffectTransform.GetComponent<Animator>();
 
             weaponSr.sprite = weaponDefinitionBase.inGameSprite;
         }
 
         public virtual void Attack(Vector2 _)
         {
-            if (!isCanAttack) return;
+            if (!IsCanAttack) return;
 
             Shake();
 
-            if (wd.attackInterval <= 0f) return;
-
-            isCooling = true;
-            isInComboTime = true;
-            comboCounter++;
+            IsCooling = true;
+            IsInComboTime = true;
+            ComboIndex++;
             
-            comboCounter = wd.comboTime;
-            attackIntervalCounter = wd.attackInterval;
+            comboCounter = Wd.comboTime;
+            attackIntervalCounter = Wd.attackInterval;
+        }
+
+        public virtual void StopAttack()
+        {
+            
         }
         
         public virtual void OnLoadWeapon()
@@ -83,29 +97,29 @@ namespace WeaponSystem
             weaponSr.sortingOrder = -1;
         }
         
-        protected abstract UniTask Shake();
+        protected abstract void Shake();
 
         private void AttackCooling()
         {
-            if (wd.attackInterval <= 0) return;
-            if (!isCanAttack)
+            if (Wd.attackInterval <= 0) return;
+            if (!IsCanAttack)
             {
                 attackIntervalCounter -= Time.deltaTime;
                 if (attackIntervalCounter <= 0)
-                    isCooling = false;
+                    IsCooling = false;
             }
         }
 
         private void Combo()
         {
-            if (wd.comboTime <= 0) return;
-            if (isInComboTime)
+            if (Wd.comboTime <= 0) return;
+            if (IsInComboTime)
             {
                 comboCounter -= Time.deltaTime;
                 if (comboCounter <= 0)
                 {
-                    isInComboTime = false;
-                    currentComboIndex = 0;
+                    IsInComboTime = false;
+                    ComboIndex = 0;
                 }
             }
         }

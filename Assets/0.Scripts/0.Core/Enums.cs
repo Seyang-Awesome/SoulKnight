@@ -1,4 +1,8 @@
-
+public enum Team
+{
+    Player,
+    Enemy,
+}
 public enum AnimationType
 {
     Idle,

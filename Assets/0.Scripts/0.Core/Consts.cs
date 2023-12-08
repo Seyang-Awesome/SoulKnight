@@ -7,6 +7,7 @@ public class Consts
     public const float LargeNum = 9999999999f;
     
     public const float BulletDisappearTime = 5f;
+    public const float LaserMaxDistance = 20;
 
     public const float FlashTime = 0.03f;
     public const string FlashAmount = "_FlashAmount";
@@ -32,6 +33,7 @@ public class Consts
     public const int EnemyBulletLayer = 12;
     public const int WallLayer = 16;
     public const int DoorLayer = 17;
+    public const int BoxLayer = 18;
     public const int PlayerColliderLayer = 21;
     public const int EnemyColliderLayer = 22;
     public const int PlayerTriggerLayer = 26;
@@ -51,12 +53,13 @@ public class Consts
     public static Vector2 EnemySpawnBox => new Vector2(0.95f,0.95f);
     public const float EnemySpawnDelayTime = 1f;
     
-    public static int DoorHalfWidth => DoorWidth / 2;
+    public const int DoorHalfWidth = DoorWidth / 2;
     public const int RoadWidth = 7;
-    public static int RoadHalfWidth = RoadWidth / 2;
+    public const int RoadHalfWidth = RoadWidth / 2;
 
-    public static int EnemyTargetLayerMask => 1 << PlayerTriggerLayer;
-    public static int MapLayerMask => 1 << WallLayer | 1 << DoorLayer;
+    public const int EnemyTargetLayerMask = 1 << PlayerTriggerLayer;
+    public const int PlayerTargetLayerMask = 1 << EnemyTriggerLayer | 1 << BoxLayer;
+    public const int MapLayerMask = 1 << WallLayer | 1 << DoorLayer | 1 << BoxLayer;
 
     public static List<Vector2Int> Directions = new()
     {
@@ -70,7 +73,4 @@ public class Consts
     {
         return Directions[Random.Range(0, Directions.Count - 1)];
     }
-    
-    
-    
 }

@@ -8,7 +8,7 @@ namespace WeaponSystem
 {
     public class WeaponInGame_Rifle : WeaponInGameBase
     {
-        private new WeaponDefinition_Rifle wd;
+        private WeaponDefinition_Rifle wd;
         private BulletBase bullet;
         public override void Init(WeaponDefinitionBase weaponDefinitionBase)
         {
@@ -21,7 +21,7 @@ namespace WeaponSystem
 
         public override void Attack(Vector2 direction)
         {
-            if (!isCanAttack) return;
+            if (!IsCanAttack) return;
         
             base.Attack(direction);
             Bullet_Single newBullet = PoolManager.Instance.GetGameObject(bullet) as Bullet_Single;
@@ -29,9 +29,9 @@ namespace WeaponSystem
             newBullet.transform.position = bulletExitPosTransform.transform.position;
         }
 
-        protected override async UniTask Shake()
+        protected override async void Shake()
         {
-            isShaking = true;
+            IsShaking = true;
 
             Vector3 startAngle = new Vector3();
             Vector3 aimAngle = new Vector3(0, 0, 5 * wd.shakeIntensity);
@@ -48,7 +48,7 @@ namespace WeaponSystem
 
             await UniTask.Delay(TimeSpan.FromSeconds(wd.backTime));
 
-            isShaking = false;
+            IsShaking = false;
         }
     }
 }

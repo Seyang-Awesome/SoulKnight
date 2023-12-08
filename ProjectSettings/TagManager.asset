@@ -65,9 +65,6 @@ TagManager:
   - name: LoadWeapon
     uniqueID: 1816635379
     locked: 0
-  - name: Bullet
-    uniqueID: 1004190537
-    locked: 0
   - name: Foreground
     uniqueID: 3939136149
     locked: 0
@@ -76,6 +73,9 @@ TagManager:
     locked: 0
   - name: ForeForeground
     uniqueID: 140556985
+    locked: 0
+  - name: Bullet
+    uniqueID: 1004190537
     locked: 0
   - name: Effect
     uniqueID: 3631538147

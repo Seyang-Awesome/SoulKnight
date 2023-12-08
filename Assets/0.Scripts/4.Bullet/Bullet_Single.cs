@@ -11,6 +11,7 @@ public class Bullet_Single : BulletBase
     
     [SerializeField] private Animator animator;
 
+    private GameObject light;
     private float appearCounter;
     private bool isActive;
 
@@ -22,6 +23,8 @@ public class Bullet_Single : BulletBase
         base.Init(info);
         this.info = info;
         rb = GetComponent<Rigidbody2D>();
+        
+        light = transform.GetChild(0).gameObject;
         light.SetActive(true);
         
         transform.right = info.Direction;

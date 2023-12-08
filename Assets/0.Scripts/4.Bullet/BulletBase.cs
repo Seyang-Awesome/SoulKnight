@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class BulletBase : MonoBehaviour
 {
-    protected GameObject light;
+    protected BulletInfo info;
 
     public virtual void Init(BulletInfo info)
     {
-        light = transform.GetChild(0).gameObject;
+        gameObject.layer = info.Team.GetRelevantBulletLayer();
+        this.info = info;
     }
 }

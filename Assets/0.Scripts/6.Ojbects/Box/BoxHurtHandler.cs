@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoxHurtHandler : Hurtable
 {
     [SerializeField] private ParticleManager particle;
+    
     private int currentHealth;
 
     private void Start()
@@ -14,7 +15,6 @@ public class BoxHurtHandler : Hurtable
 
     public override void Hurt(HurtInfo info)
     {
-        Debug.Log("Box");
         currentHealth -= info.Damage;
         if (currentHealth <= 0)
             DestroyBox();
@@ -24,6 +24,7 @@ public class BoxHurtHandler : Hurtable
     {
         particle = PoolManager.Instance.GetGameObject(particle);
         particle.transform.position = transform.position + new Vector3(0.5f,0.5f);
+        
         PoolManager.Instance.PushGameObject(transform.root.gameObject);
     }
 }

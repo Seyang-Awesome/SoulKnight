@@ -9,5 +9,21 @@ public static class ProjectExtension
     {
         return transform.GetChild((int)layer).GetComponent<Tilemap>();
     }
+
+    public static int GetRelevantBulletLayer(this Team team)
+    {
+        if (team == Team.Player)
+            return Consts.PlayerBulletLayer;
+        else
+            return Consts.EnemyBulletLayer;
+    }
+
+    public static int GetRelevantTargetLayerMask(this Team team)
+    {
+        if (team == Team.Player)
+            return Consts.PlayerTargetLayerMask;
+        else
+            return Consts.EnemyTargetLayerMask;
+    }
 }
 
