@@ -128,6 +128,12 @@ public class PoolManager : MonoSingleton<PoolManager>
         }
     }
 
+    public void PushGameObject(Component component)
+    {
+        if (component == null) return;
+        PushGameObject(component.gameObject);
+    }
+
     public T GetObject<T>() where T:class, new()
     {
         T forReturn=null;

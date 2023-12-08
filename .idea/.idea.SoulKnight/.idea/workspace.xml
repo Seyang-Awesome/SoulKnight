@@ -5,40 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions/Poison.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions/Poison.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/IBuffCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/IBuffCommand.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/ContinuousSchedule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/ContinuousSchedule.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EntityInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EntityInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffIcon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffIcon.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Enums.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/MonoSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/SeyangExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/SeyangExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerHurtHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BattleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/RoomManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/Schedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/Schedule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/ScheduleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/ScheduleManager/ScheduleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/Hurtable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/Hurtable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/RoomBattleInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomBattleInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/RoomBattleInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomBattleInfo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/RoomBeforeGenerateInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomBeforeGenerateInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/RoomBeforeGenerateInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/5.Room/RoomBeforeGenerateInfo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Enemys/Enemy_21002.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/PoolManager/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/PoolManager/PoolManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +141,7 @@
       <workItem from="1701434967083" duration="1529000" />
       <workItem from="1701508886280" duration="16293000" />
       <workItem from="1701683600870" duration="38000" />
-      <workItem from="1702032966027" duration="7869000" />
+      <workItem from="1702032966027" duration="12811000" />
     </task>
     <servers />
   </component>
