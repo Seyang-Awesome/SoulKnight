@@ -2,25 +2,43 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuffManager : MonoSingleton<BuffManager>
 {
+    [Serializable]
+    public struct BuffIconConfig
+    {
+        public BuffType buffType;
+        public Sprite buffSprite;
+    }
+    
+    [SerializeField] private List<BuffIconConfig> buffIconConfigs = new();
     [SerializeField] private BuffIcon buffIconPrefab;
     protected override bool IsDontDestroyOnLoad => false;
+    private Dictionary<BuffType, Sprite> buffIcons = new();
     private Dictionary<Hurtable, List<BuffType>> targetEntities = new();
     private Dictionary<Hurtable, BuffIcon> targetIcons = new();
+
+    private void Start()
+    {
+        buffIconConfigs.ForEach(buffIconConfig => buffIcons.Add(buffIconConfig.buffType,buffIconConfig.buffSprite));
+    }
+    
     public void AddBuff(BuffInfo info)
     {
         if(info == null) return;
         Hurtable target = info.Target;
-        List<BuffType> relevantBuffList = targetEntities[target];
-        
         //检查是否这个对象还处于BUFF效果中，如果没有则添加一个
         if (!targetEntities.ContainsKey(target))
         {
             targetEntities.Add(target, new List<BuffType>());
-            targetIcons.Add(target,PoolManager.Instance.GetGameObject<BuffIcon>(buffIconPrefab));
+            BuffIcon buffIcon = PoolManager.Instance.GetGameObject<BuffIcon>(buffIconPrefab,target.EntityInfo.transform);
+            buffIcon.transform.position = target.EntityInfo.transform.position +
+                                          new Vector3(0, target.EntityInfo.BuffIconHeadHeight);
+            targetIcons.Add(target,buffIcon);
         }
+        List<BuffType> relevantBuffList = targetEntities[target];
         
         //不能重复受到同一种BUFF的效果
         List<BuffType> buffTypes = new();
@@ -33,6 +51,9 @@ public class BuffManager : MonoSingleton<BuffManager>
                 buffCommands.Add(GetBuffCommand(buffType));
             }
         });
+
+        //如果没有要添加的BUFF效果，那就直接返回
+        if (buffTypes.Count <= 0) return;
         
         targetEntities[target] = relevantBuffList.Concat(buffTypes).ToList();
         buffTypes.ForEach(buffType => targetIcons[target].AddIcon(buffType));
@@ -75,11 +96,19 @@ public class BuffManager : MonoSingleton<BuffManager>
     //     BuffIcon buffIcon = targetIcons[info];
     //     buffIcon.RemoveIcon(buffType);
     // }
+    
+    public Sprite GetRelevantBuffSprite(BuffType buffType)
+    {
+        if (!buffIcons.ContainsKey(buffType)) return null;
+        return buffIcons[buffType];
+    }
 
     private IBuffCommand GetBuffCommand(BuffType buffType)
     {
         if (buffType == BuffType.Poison)
             return new Poison();
+        if (buffType == BuffType.Fire)
+            return new Fire();
         return null;
     }
 }

@@ -6,8 +6,9 @@ public class EnemyHurtHandler : Hurtable
 {
     private EnemyInfo enemyInfo;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         enemyInfo = GetComponentInParent<EnemyInfo>();
     }
 

@@ -102,10 +102,9 @@ namespace WeaponSystem
             if (CurrentWeaponNum >= weaponUpLimit)
                 RemoveCurrentWeapon();
             WeaponInGameBase newWeapon = GetWeaponInstance(wd);
-            currentWeapon = newWeapon;
             AddWeapon(newWeapon);
             
-            SwitchWeapon(currentWeapon);
+            SwitchWeapon(newWeapon);
         }
 
         private WeaponInGameBase GetWeaponInstance(WeaponDefinitionBase wd)
@@ -119,7 +118,12 @@ namespace WeaponSystem
 
         private void SwitchWeapon(WeaponInGameBase wig)
         {
-            if(currentWeapon != null) currentWeapon.OnUnloadWeapon();
+            if (currentWeapon != null)
+            {
+                currentWeapon.StopAttack();
+                currentWeapon.OnUnloadWeapon();
+            }
+            
             currentWeapon = wig;
             currentWeapon.OnLoadWeapon();
         }

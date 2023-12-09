@@ -34,12 +34,11 @@ public class WeaponInGame_Knife_ZeroConsume : WeaponInGame_Knife
 
     public override void OnAttackTiming()
     {
-        Debug.Log("OnAttackTiming");
         Collider2D[] detecteds = Physics2D.OverlapBoxAll(AttackCenter, wd.attackBox,
             Vector2.Angle(Vector2.right, attackDirection), Consts.PlayerTargetLayerMask);
         // detecteds.ToList().ForEach(detect => Debug.Log(detect));
         // Debug.Log(attackDirection);
-        HurtInfo hurtInfo = new HurtInfo(wd.damage, attackDirection);
+        HurtInfo hurtInfo = new HurtInfo(wd.damage, attackDirection,wd.damageIntensity);
         detecteds?.ToList().ForEach(detect => detect.GetComponent<Hurtable>().Hurt(hurtInfo));
     }
     

@@ -15,5 +15,6 @@ public class EntityInfo : MonoBehaviour
     public Vector2 TargetPos => target.bounds.center;
     public Vector2 TargetDirection => TargetPos - CenterPos;
     public int TargetDirectionCoefficient => TargetDirection.x >= 0 ? 1 : -1;
+    public virtual float BuffIconHeadHeight => 2f;
 }
 

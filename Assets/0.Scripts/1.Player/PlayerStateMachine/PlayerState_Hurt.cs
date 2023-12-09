@@ -8,7 +8,7 @@ public class PlayerState_Hurt : PlayerState
     public override void Enter()
     {
         counter = Consts.BackTime;
-        controller.SetVelocity(info.hurtInfo.DamageDirection * Consts.BackVelocity);
+        controller.SetVelocity(info.hurtInfo.DamageDirection * (Consts.BackVelocity * info.hurtInfo.DamageIntensity));
         
         info.hurt = false;
         info.hurtInfo = null;

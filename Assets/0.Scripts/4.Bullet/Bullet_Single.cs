@@ -66,7 +66,7 @@ public class Bullet_Single : BulletBase
         if (other.CompareTag(Consts.EnemyTeamTag) || other.CompareTag(Consts.PlayerTeamTag) ||
             other.CompareTag(Consts.BoxTag))
         {
-            HurtInfo hurtInfo = new(info.Damage,other.bounds.center - transform.position);
+            HurtInfo hurtInfo = new(info.Damage,other.bounds.center - transform.position,1f);
             other.GetComponent<Hurtable>().Hurt(hurtInfo);
         }
         

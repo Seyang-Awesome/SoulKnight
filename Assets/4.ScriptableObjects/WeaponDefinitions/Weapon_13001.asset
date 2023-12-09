@@ -26,5 +26,6 @@ MonoBehaviour:
   attackBox: {x: 3, y: 5}
   spriteSpeed: 1
   effectSpeed: 1
+  damageIntensity: 3
   weaponSpriteAnimator: {fileID: 9100000, guid: a9c58208dc2ec714e9c221d8ac9829ab, type: 2}
   weaponEffectAnimator: {fileID: 9100000, guid: ca39986836388df44ad93c2660e5db5e, type: 2}

@@ -47,7 +47,7 @@ public class Bullet_Laser : BulletBase
                 Vector2.Angle(CurrentDirection, (Vector2)detect.bounds.center - (Vector2)transform.position) > 0
                     ? Vector2.right
                     : Vector2.left;
-            HurtInfo hurtInfo = new HurtInfo(info.Damage,hurtSource);
+            HurtInfo hurtInfo = new HurtInfo(info.Damage,hurtSource,0);
             detect.GetComponent<Hurtable>().Hurt(hurtInfo);
         });
     }

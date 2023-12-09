@@ -13,7 +13,8 @@ public class WeaponDefinition_Knife : WeaponDefinitionBase
 
     public float spriteSpeed;
     public float effectSpeed;
-
+    public float damageIntensity;
+    
     public RuntimeAnimatorController weaponSpriteAnimator;
     public RuntimeAnimatorController weaponEffectAnimator;
 }

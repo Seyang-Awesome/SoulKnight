@@ -19,6 +19,8 @@ public class BuffInfo
 
         if ((buffIndex & (int)BuffType.Poison) != 0)
             BuffTypes.Add(BuffType.Poison);
+        if ((buffIndex & (int)BuffType.Fire) != 0)
+            BuffTypes.Add(BuffType.Fire);
     }
     
     // public void AddBuffType(BuffType buffType)

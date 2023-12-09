@@ -19,7 +19,7 @@ public class EnemyController_21001 : EnemyController
             if (attackTarget.CompareTag("PlayerTeam"))
             {
                 HurtInfo hurtInfo = new HurtInfo(attackPower, 
-                    (Vector2)attackTarget.bounds.center - info.CenterPos);
+                    (Vector2)attackTarget.bounds.center - info.CenterPos,1);
                 attackTarget.GetComponent<Hurtable>().Hurt(hurtInfo);
             }
         }

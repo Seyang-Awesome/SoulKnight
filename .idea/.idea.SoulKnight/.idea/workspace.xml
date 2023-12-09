@@ -5,12 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffIcon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffIcon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Fire.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Fire.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerHurtHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerStateMachine/PlayerState_Hurt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerStateMachine/PlayerState_Hurt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyControllers/EnemyController_21001.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyControllers/EnemyController_21001.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyHurtHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_Knife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_Knife.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Knife_ZeroConsume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Knife_ZeroConsume.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Laser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Laser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Single.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Single.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions/Poison.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Poison.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions/Poison.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Poison.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffIcon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffIcon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/PoolManager/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/PoolManager/PoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/EntityInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EntityInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/HurtInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/HurtInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/Hurtable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/Hurtable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4.ScriptableObjects/WeaponDefinitions/Weapon_13001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4.ScriptableObjects/WeaponDefinitions/Weapon_13001.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,10 +118,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35588">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="35588" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -141,7 +159,7 @@
       <workItem from="1701434967083" duration="1529000" />
       <workItem from="1701508886280" duration="16293000" />
       <workItem from="1701683600870" duration="38000" />
-      <workItem from="1702032966027" duration="12811000" />
+      <workItem from="1702032966027" duration="21912000" />
     </task>
     <servers />
   </component>
@@ -163,24 +181,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/0.Scripts/Managers/GameInput.cs</url>
-          <line>6</line>
-          <properties documentPath="G:\GitHub\SoulKnight\Assets\0.Scripts\Managers\GameInput.cs" initialLine="6" containingFunctionPresentation="Property 'moveInput'">
-            <startOffsets>
-              <option value="156" />
-            </startOffsets>
-            <endOffsets>
-              <option value="196" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
