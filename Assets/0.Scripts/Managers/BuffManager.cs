@@ -106,9 +106,9 @@ public class BuffManager : MonoSingleton<BuffManager>
     private IBuffCommand GetBuffCommand(BuffType buffType)
     {
         if (buffType == BuffType.Poison)
-            return new Poison();
+            return new PoisonCommand();
         if (buffType == BuffType.Fire)
-            return new Fire();
+            return new FireCommand();
         return null;
     }
 }

@@ -5,7 +5,11 @@ public class Consts
 {
     public const float TinyNum = 0.1f;
     public const float LargeNum = 9999999999f;
-    
+
+    public const float PoisonAndFireAppearTime = 0.3f;
+    public const float PoisonAndFireDetectTime = 0.5f;
+    public const float PoisonAndFireExistTime = 5f;
+    public const float PoisonAndFireDetectRadius = 3f;
     public const float BulletDisappearTime = 5f;
     public const float LaserMaxDistance = 20;
 
@@ -59,6 +63,10 @@ public class Consts
 
     public const int EnemyTargetLayerMask = 1 << PlayerTriggerLayer;
     public const int PlayerTargetLayerMask = 1 << EnemyTriggerLayer | 1 << BoxLayer;
+    public const int BuffTargetLayerMask = 1 << PlayerTriggerLayer | 1 << EnemyTriggerLayer;
+    public const int CommonBulletLayerMask = 1 << BoxLayer;
+    public const int PlayerBulletTargetLayerMask = 1 << EnemyTriggerLayer | CommonBulletLayerMask;
+    public const int EnemyBulletTargetLayerMask = 1 << PlayerTriggerLayer | CommonBulletLayerMask;
     public const int MapLayerMask = 1 << WallLayer | 1 << DoorLayer | 1 << BoxLayer;
 
     public static List<Vector2Int> Directions = new()

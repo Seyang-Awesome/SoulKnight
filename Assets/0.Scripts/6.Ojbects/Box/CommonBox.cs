@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxHurtHandler : Hurtable
+public class CommonBox : Hurtable
 {
     [SerializeField] private ParticleManager particle;
     
@@ -20,7 +20,7 @@ public class BoxHurtHandler : Hurtable
             DestroyBox();
     }
 
-    private void DestroyBox()
+    protected virtual void DestroyBox()
     {
         particle = PoolManager.Instance.GetGameObject(particle);
         particle.transform.position = transform.position + new Vector3(0.5f,0.5f);

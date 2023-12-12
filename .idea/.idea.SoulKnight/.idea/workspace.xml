@@ -5,30 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Fire.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Fire.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/CommandSubject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/CommandSubject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/ICommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/ICommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/ListenerCommponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/ListenerCommponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/ParticleCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/ParticleCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/PushToPoolCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/PushToPoolCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/SetGameOjbectCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/SetGameOjbectCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/MonoCommands.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/PoisonBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/PoisonBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Fire.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Fire.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Poison.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Poison.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerHurtHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerStateMachine/PlayerState_Hurt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerStateMachine/PlayerState_Hurt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyControllers/EnemyController_21001.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyControllers/EnemyController_21001.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/2.Enemy/EnemyHurtHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_Knife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponDefinition/WeaponDefinition_Knife.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Knife_ZeroConsume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Knife_ZeroConsume.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Laser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Laser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Single.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/4.Bullet/Bullet_Single.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions/Poison.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Poison.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffFunctions/Poison.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Poison.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffIcon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffIcon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/Box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/Box.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/Box.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/BoxHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/CommonBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/BoxHurtHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/CommonBox.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/FireCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Fire.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/FireCommand.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Poison.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/PoisonCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Poison.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/PoisonCommand.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/EntityInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/EntityInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/HurtInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/HurtInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/Hurtable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/Hurtable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/RoomManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4.ScriptableObjects/WeaponDefinitions/Weapon_13001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4.ScriptableObjects/WeaponDefinitions/Weapon_13001.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Others/BuffIconContainer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Others/BuffIconContainer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/Box.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/Box.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +58,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/21a21d8d96794eb1ae4e5997a94cf44f20800/ae/86b4c9ed/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/438434158d17497c8ca6d39a5a59f5cea000/fd/692f1b8d/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b9fa26e86114fcba20da47317e725fe172c00/1c/b16a6e0a/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b9fa26e86114fcba20da47317e725fe172c00/45/73f5af0b/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b9fa26e86114fcba20da47317e725fe172c00/68/f2efe1be/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b9fa26e86114fcba20da47317e725fe172c00/92/6a371635/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b9fa26e86114fcba20da47317e725fe172c00/d9/5928a646/Transform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -52,6 +68,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/da/a2d8c934/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d303c2bf72cd4cec95665b89c457d265d2b8ef3ed6da17cd4f85587c2f9de7/System.Linq.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/DestroySystem/IDestroyCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0.Scripts/0.Core/StateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0.Scripts/5.Room/Room.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0.Scripts/BehaviourTree/NoEditor/NodeBases/NodeBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -118,10 +135,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35588">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="35588" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -159,7 +176,9 @@
       <workItem from="1701434967083" duration="1529000" />
       <workItem from="1701508886280" duration="16293000" />
       <workItem from="1701683600870" duration="38000" />
-      <workItem from="1702032966027" duration="21912000" />
+      <workItem from="1702032966027" duration="21915000" />
+      <workItem from="1702184668206" duration="12401000" />
+      <workItem from="1702199526675" duration="2298000" />
     </task>
     <servers />
   </component>

@@ -192,7 +192,7 @@ public class RoomManager : MonoSingleton<RoomManager>
         infos.ForEach(info =>
         {
             rooms.Add(info,SetRoom(info));
-            Debug.Log($"{info.Point}，{info.RoomType}");
+            // Debug.Log($"{info.Point}，{info.RoomType}");
         });
         return rooms;
     }

@@ -51,9 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9e80c5aa54b23b7dfab80349a52e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buffIconConfigs:
-  - buffType: 1
-    buffSprite: {fileID: 21300000, guid: b9512fad7ad146743a3c7edd54f2f895, type: 3}
   buffIconImagePrefab: {fileID: 5208882355277109112, guid: b9a549eb5ddf36d43a284a9c58f79959, type: 3}
 --- !u!223 &11210547420094405
 Canvas:
@@ -100,7 +97,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &6128661688289805382
 MonoBehaviour:
   m_ObjectHideFlags: 0
