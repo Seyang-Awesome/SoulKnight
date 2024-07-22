@@ -4,6 +4,11 @@ using UnityEngine;
 
 namespace WeaponSystem
 {
+    /// <summary>
+    /// 主要负责的模块有
+    /// 1. 玩家身上武器的管理，包括添加，移除，切换，初始化武器
+    /// 2. 玩家武器朝向的管理
+    /// </summary>
     public class WeaponController : MonoBehaviour
     {
         [SerializeField] private int weaponUpLimit;
@@ -35,6 +40,9 @@ namespace WeaponSystem
                 return (CurrentWeaponIndex + 1) % CurrentWeaponNum;
             }
         }
+
+        public event Action<WeaponInGameBase> onAddWeapon;
+        public event Action<WeaponInGameBase> onRemoveWeapon;
         
         
         private void Start()
@@ -84,12 +92,14 @@ namespace WeaponSystem
         {
             if (weaponInGames.Count >= weaponUpLimit) return;
             weaponInGames.Add(weapon);
+            onAddWeapon?.Invoke(weapon);
         }
 
         private void RemoveWeapon(WeaponInGameBase weapon)
         {
             if (!weaponInGames.Contains(weapon)) return;
             weaponInGames.Remove(weapon);
+            onRemoveWeapon?.Invoke(weapon);
         }
 
         private void RemoveCurrentWeapon()

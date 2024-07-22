@@ -5,14 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb041e1-14c6-46d4-a5d9-02bf183cb806" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/CommandSubject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/CommandSubject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/ICommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/ICommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/ListenerCommponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/Base/ListenerCommponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/ParticleCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/ParticleCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/PushToPoolCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/PushToPoolCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/SetGameOjbectCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/CommonCommands/SetGameOjbectCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Experiment/CommandSystem/MonoCommands.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/PoisonBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/PoisonBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Fire.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Fire.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Poison.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Poison.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulKnight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerStateMachine/PlayerState_Hurt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/1.Player/PlayerStateMachine/PlayerState_Hurt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGameBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/3.Weapon/WeaponInGame/WeaponInGame_Laser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Others/HurtInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Others/HurtInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/0.Core/Consts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/Box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/Box.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/Box.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/BoxHurtHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/CommonBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/BoxHurtHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/6.Ojbects/Box/CommonBox.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/FireCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Fire.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/FireCommand.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Poison.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/PoisonCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/Poison.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/7.Buff/BuffCommands/PoisonCommand.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/BuffManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0.Scripts/Managers/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0.Scripts/Managers/RoomManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4.ScriptableObjects/EnemyBtConfig/Enemy_21001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4.ScriptableObjects/EnemyBtConfig/Enemy_21001.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Others/BuffIconContainer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2.Prefabs/Others/BuffIconContainer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/Box.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2.Prefabs/Rooms/Box.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,31 +86,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ReSpellerSettingsId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ReSpellerSettingsId&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Seyang\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Seyang\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Seyang\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\色阳\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\色阳\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\色阳\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\UnityEditor\Unity 2022.3.8f1c1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.8f1c1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath G:\GitHub\SoulKnight -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="G:\GitHub\SoulKnight" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -87,7 +118,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\UnityEditor\Unity 2022.3.8f1c1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.8f1c1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath G:\GitHub\SoulKnight -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="G:\GitHub\SoulKnight" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -148,7 +179,6 @@
       <workItem from="1702032966027" duration="21915000" />
       <workItem from="1702184668206" duration="12401000" />
       <workItem from="1702199526675" duration="2298000" />
-      <workItem from="1721620309802" duration="2352000" />
     </task>
     <servers />
   </component>
@@ -156,11 +186,6 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
-  <component name="UnityProjectDiscoverer">
-    <option name="hasUnityReference" value="true" />
-    <option name="unityProject" value="true" />
-    <option name="unityProjectFolder" value="true" />
-  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

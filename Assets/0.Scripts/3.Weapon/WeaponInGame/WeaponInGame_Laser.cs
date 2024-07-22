@@ -59,15 +59,12 @@ public class WeaponInGame_Laser : WeaponInGameBase
         {
             damageCounter = damageInterval;
             currentLaser.Hurt();
-            Debug.Log("Hurt");
         }
     }
 
     public override void StopAttack()
     {
-        Debug.Log("StopAttack");
         if(currentLaser == null) return;
-        Debug.Log("StopAttack");
         PoolManager.Instance.PushGameObject(currentLaser.gameObject);
         currentLaser = null;
         ResetCounter();

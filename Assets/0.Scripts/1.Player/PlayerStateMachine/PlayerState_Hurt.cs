@@ -11,7 +11,6 @@ public class PlayerState_Hurt : PlayerState
         controller.SetVelocity(info.hurtInfo.DamageDirection * (Consts.BackVelocity * info.hurtInfo.DamageIntensity));
         
         info.hurt = false;
-        info.hurtInfo = null;
     }
 
     public override void PhysicsUpdate()

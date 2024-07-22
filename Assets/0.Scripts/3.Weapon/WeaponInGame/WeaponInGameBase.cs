@@ -1,9 +1,16 @@
+using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace WeaponSystem
 {
+    /// <summary>
+    /// 武器执行逻辑的基类
+    /// 1. 根据玩家输入执行武器的相关逻辑
+    /// 2. 检测武器的执行状态
+    /// 3. 武器的效果展示，包括武器特效，发射子弹
+    /// </summary>
     public abstract class WeaponInGameBase : MonoBehaviour
     {
         protected WeaponDefinitionBase weaponDefinitionBase;
@@ -17,27 +24,24 @@ namespace WeaponSystem
         protected Vector2 WeaponDirection => transform.right * scaleIndex;
         protected int scaleIndex => weaponRoot.localScale.x > 0 ? 1 : -1;
         
-        [SerializeField]
-        protected Transform weaponRoot;
-        [SerializeField]
-        protected Transform weaponSpriteTransform;
-        [SerializeField]
-        protected Transform bulletExitPosTransform;
-        [SerializeField]
-        protected Transform weaponEffectTransform;
+        [SerializeField] protected Transform weaponRoot;
+        [SerializeField] protected Transform weaponSpriteTransform;
+        [SerializeField] protected Transform bulletExitPosTransform;
+        [SerializeField] protected Transform weaponEffectTransform;
         
-        [SerializeField]
-        protected SpriteRenderer weaponSr;
-        [SerializeField]
-        protected SpriteRenderer weaponEffectSr;
-        [SerializeField] 
-        protected Animator weaponSpriteAnimator;
-        [SerializeField] 
-        protected Animator weaponEffectAnimator;
+        [SerializeField] protected SpriteRenderer weaponSr;
+        [SerializeField] protected SpriteRenderer weaponEffectSr;
+        [SerializeField] protected Animator weaponSpriteAnimator;
+        [SerializeField] protected Animator weaponEffectAnimator;
         
-
         private float attackIntervalCounter;
         private float comboCounter;
+
+        public event Action onLoadWeapon;
+        public event Action onUnloadWeapon;
+        public event Action onAttack;
+        public event Action onStopAttack;
+        public event Action<int> onTriggerCombo;
 
         private void Update()
         {
@@ -77,24 +81,29 @@ namespace WeaponSystem
             IsCooling = true;
             IsInComboTime = true;
             ComboIndex++;
+            onTriggerCombo?.Invoke(ComboIndex);
             
             comboCounter = Wd.comboTime;
             attackIntervalCounter = Wd.attackInterval;
+            
+            onAttack?.Invoke();
         }
 
         public virtual void StopAttack()
         {
-            
+            onStopAttack?.Invoke();
         }
         
         public virtual void OnLoadWeapon()
         {
             weaponSr.sortingOrder = 1;
+            onLoadWeapon?.Invoke();
         }
 
         public virtual void OnUnloadWeapon()
         {
             weaponSr.sortingOrder = -1;
+            onUnloadWeapon?.Invoke();
         }
         
         protected abstract void Shake();
@@ -120,6 +129,7 @@ namespace WeaponSystem
                 {
                     IsInComboTime = false;
                     ComboIndex = 0;
+                    onTriggerCombo?.Invoke(ComboIndex);
                 }
             }
         }

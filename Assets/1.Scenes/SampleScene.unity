@@ -971,7 +971,7 @@ MonoBehaviour:
   weaponUpLimit: 2
   weaponRoot: {fileID: 451212067}
   blankWeaponPrefab: {fileID: 8206031411839440638, guid: bea86f31f7d07d643917bd12078ffbd1, type: 3}
-  testWeapon1: {fileID: 11400000, guid: 81befc32b582a284e8f4526412e1312f, type: 2}
+  testWeapon1: {fileID: 11400000, guid: 55cc4f0d3acf9fe47b7ffa3e3df510dd, type: 2}
   testWeapon2: {fileID: 11400000, guid: 3a82c71085f9bdf49a01e8861450fb0f, type: 2}
 --- !u!1 &1892525509
 GameObject:

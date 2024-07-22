@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HurtInfo
+public struct HurtInfo
 {
     public int Damage { get; private set; }
     public Vector2 DamageDirection { get; private set; }

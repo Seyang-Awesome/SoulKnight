@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: InterruptableNode
   m_EditorClassIdentifier: 
   guid: c102843f-ca56-444d-9b31-9c4c2c609259
-  posInView: {x: 551, y: 227.99998}
+  posInView: {x: 551.00006, y: 228}
   child: {fileID: -6069370443079606834}
   duration: 3
 --- !u!114 &-4697310397015002135
